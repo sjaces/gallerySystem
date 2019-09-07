@@ -9,7 +9,7 @@ import Item from './item.vue'
 export default {
     props: {
         list: {
-            type: Object,
+            type: Array,
             required: true
         }
 		},

@@ -1,0 +1,427 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
+:root {
+    --color: rgb(0, 0, 0);
+    --fondo: rgb(0, 0, 0);
+    --fondoBarra: rgb(0, 0, 0);
+    --colorSobre: rgb(0, 0, 0);
+    --colorRedes: rgb(0, 0, 0);
+    /*Descomentamos según el diario que sea*/
+    /*DDS*/
+    --colorDestacado: #e0bc17;
+    /*MH*/
+    /*--colorDestacado: #0F7EAA;*/
+    /*GH*/
+    /*--colorDestacado: #981230;*/
+    /*DDC*/
+    /*--colorDestacado: #a82616;*/
+    /*DDJ*/
+    /*--colorDestacado: #cc8d00;*/
+    /*ES*/
+    /*--colorDestacado: #00898b;*/
+    /*DDA*/
+    /*--colorDestacado: #0c74a8;*/
+    /*HI*/
+    /*--colorDestacado: #e9c88b;*/
+    /*EDC*/
+    /*--colorDestacado: #0070ae;*/
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 26px;
+    color: var(--color);
+    text-align: left;
+    background-color: var(--fondo);
+    letter-spacing: .5px
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .75rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: inherit
+}
+
+a {
+    color: var(--colorDestacado);
+    font-weight: 700
+}
+
+a:hover {
+    color: --colorSobre;
+    font-weight: 700
+}
+
+p {
+    color: #FFF;
+}
+
+.navbar {
+    border-bottom: 5px solid var(--colorDestacado);
+    background: var(--fondoBarra);
+    color: var(--color);
+    padding: 0
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .5)
+}
+
+.navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, .75)
+}
+
+.navbar .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, .25)
+}
+
+.lead {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center!important;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.magenarriba {
+    margin-top: 50px!important
+}
+
+.btn-warning {
+    background: var(--colorDestacado);
+    border-color: var(--colorDestacado);
+    color: var(--fondo);
+    font-weight: 600
+}
+
+.btn-warning:hover {
+    color: var(--colorDestacado);
+    background-color: var(--fondo);
+    border-color: var(--colorDestacado)
+}
+
+#botonera {
+    position: fixed;
+    padding: 10px 0 10px 10px;
+    background: var(--colorDestacado);
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px
+}
+
+#botonera a {
+    color: var(--colorRedes)
+}
+
+.boton {
+    display: inline-block;
+    margin-left: 20px
+}
+
+.hidden {
+    display: none!important
+}
+
+#imagenFondo {
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    margin-top: 70px;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px
+}
+
+#imagenFondoAbajo {
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+    /* IE6-9 */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    margin-top: 70px;
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+
+.postit {
+    padding: 10px!important;
+    text-align: center
+}
+
+.colorDestacado {
+    color: var(--colorDestacado)
+}
+
+.ibm {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+    margin-top: 25px;
+    color: #FFF;
+}
+
+h1.ibm strong {
+    color: var(--colorDestacado)
+}
+
+.subtitulo {
+    font-family: 'Roboto ', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--colorDestacado);
+    text-align: center
+}
+
+.firma {
+    font-size: 90%
+}
+
+.margenarriba {
+    margin-top: 50px
+}
+
+.img-fluid {
+    /* margin-bottom: 20px; */
+    /* box-shadow: 1px 1px 3px 3px #333 */
+}
+
+.firmaFoto {
+    text-align: right;
+    margin-top: -1.7em;
+    font-size: .7em;
+    font-weight: 300;
+    min-height: 1.7em;
+    color: #FFF;
+}
+
+.flex {
+    display: flex
+}
+
+.flex>img {
+    object-fit: cover
+}
+
+.logofooter {
+    width: 200px;
+    display: block;
+    text-align: center;
+    margin: 0 auto
+}
+
+#home>img {
+    display: block;
+    text-align: center;
+    margin: 0 auto
+}
+
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+    color: #fff;
+}
+
+@media (max-width:800px) {
+    #imagenFondo {
+        display: none!important;
+        visibility: hidden!important
+    }
+    #botonera {
+        margin: 0 auto;
+        bottom: 10px;
+        font-size: 13px;
+        width: 40%;
+        min-width: 200px;
+        padding: 10px 10px 5px 10px;
+        right: 0;
+        left: 0;
+        border-radius: 10px
+    }
+}
+
+@media (min-width:801px) {
+    .margenarriba {
+        margin-top: 0
+    }
+    .paramovil {
+        display: none;
+        visibility: hidden
+    }
+    #imagenFondo {
+        text-align: center;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url(../portada.jpg);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        margin-top: 30px;
+        min-height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px
+    }
+    #imagenFondoAbajo {
+        text-align: center;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url(../portada.jpg);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        /* IE6-9 */
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        margin-top: 30px;
+        min-height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px;
+    }
+    .postit {
+        padding: 20px!important;
+        margin-bottom: 25px
+    }
+    strong {
+        font-weight: 700!important
+    }
+    #botonera {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 10px 0;
+        margin: 0;
+        right: 5px;
+        background: var(--colorDestacado)
+    }
+    .fa-fw {
+        width: auto;
+        text-align: center
+    }
+    .boton {
+        margin: 5px 10px;
+        font-size: 15px;
+        text-align: center
+    }
+}
+
+@media (min-width:768px) {
+    .img-fluid {
+        margin-top: 20px
+    }
+    .lead {
+        font-size: 30px;
+        margin-bottom: 10px
+    }
+}
+
+@media (min-width:992px) {
+    .navbar {
+        border-bottom: 10px solid var(--colorDestacado);
+        padding: 10px
+    }
+}
+
+.navbar .navbar-toggler {
+    color: rgba(255, 255, 255, .5);
+    border-color: rgba(255, 255, 255, .1)
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox=!string!xmlns=!string!%3E%3Cpath stroke=!string!stroke-width=!string!stroke-linecap=!string!stroke-miterlimit=!string!d=!string!/%3E%3C/svg%3E")
+}
+
+.navbar .navbar-text {
+    color: rgba(255, 255, 255, .5)
+}
+
+.navbar .navbar-text a {
+    color: var(--colorDestacado)
+}
+
+.navbar .navbar-text a:focus, .navbar .navbar-text a:hover {
+    color: var(--colorDestacado)
+}
+
+.colorBlanco {
+    color: #fff
+}
+
+.imagen-izquierda {
+    display: block;
+    float: left;
+    clear: right;
+    margin: 7px 20px 20px 0;
+    padding-right: 20px;
+    max-width: var(--anchoPersonaje)
+}
+
+.imagen-derecha {
+    display: block;
+    float: right;
+    clear: right;
+    margin: 7px 0 20px 20px;
+    padding-left: 20px;
+    max-width: var(--anchoPersonaje)
+}
+
+.cargo {
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: italic
+}
+
+.desktop {
+    display: inherit
+}
+
+.movil {
+    display: none!important
+}
+
+@media (max-width:575px) {
+    .movil {
+        display: inherit!important
+    }
+    .desktop {
+        display: none!important
+    }
+}
+
+/*Publicidad*/
+
+#right1, #right2, #right3, #right4 {
+    margin: 10px auto;
+    text-align: center;
+}

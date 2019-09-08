@@ -1,7 +1,7 @@
 <template lang="pug"> 
 		ul
 			li(v-for='item in list')
-				Item(:item='item')
+				Item(:item='item' v-on:oneMore="setOneMore(item)")
 </template>
 
 <script>
@@ -13,7 +13,13 @@ export default {
             required: true
         }
 		},
-		components: { Item }
+		components: { Item },
+		methods: {
+			setOneMore(item){
+				console.log("lista +1 ", item.title)
+				this.$emit('oneMore', item.title)
+			}
+		}
 }
 </script>
 

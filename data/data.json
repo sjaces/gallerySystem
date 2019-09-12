@@ -1,0 +1,24 @@
+{ "list": [
+    {
+      "title": "Tercero",
+      "img_src": "./data/imagenes/1. Barronal Fran Murcia.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Héroes y es uno de los rostros populares del talent show La Voz. Inmerso en una gira promocional por toda España, ahora David Bustamante aterriza en Sevilla para ofrecer un concierto en el espacio Cartuja Center el 13 de septiembre. El cántabro vuelve a las tablas tras un breve descanso para interpretar temas nuevos, como Héroes en tiempos de guerra, o clásicos como No soy un supermnán.",
+      "rank": 3
+    },
+    {
+      "title": "Primero",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "rank": 1
+    },
+    {
+      "title": "segundo",
+      "img_src": "./data/imagenes/3. CALA DE SAN PEDRO.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Héroes y es uno de los rostros populares del talent show La Voz. Inmerso en una gira promocional por toda España, ahora David Bustamante aterriza en Sevilla para ofrecer un concierto en el espacio Cartuja Center el 13 de septiembre. El cántabro vuelve a las tablas tras un breve descanso para interpretar temas nuevos, como Héroes en tiempos de guerra, o clásicos como No soy un supermnán.",
+      "rank": 5
+    }
+  ]
+}

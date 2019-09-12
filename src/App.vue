@@ -10,7 +10,9 @@ import List from './components/list.vue'
 // import "bootstrap/dist/css/bootstrap.min.css"
 import "./assets/css/estiloscomunes.css"
 import "./assets/css/personalizado.css"
-import "./assets/animate-in.js"
+import "./assets/js/animate-in.js"
+import "./assets/js/cabeceras.min.js"
+import "./assets/js/vistasDs.js"
 
 // import 'bootstrap'
 export default {

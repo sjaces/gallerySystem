@@ -8,6 +8,8 @@
 <script>
 import List from './components/list.vue'
 // import "bootstrap/dist/css/bootstrap.min.css"
+
+import $ from 'jquery'
 import "./assets/css/estiloscomunes.css"
 import "./assets/css/personalizado.css"
 import "./assets/js/animate-in.js"
@@ -32,7 +34,6 @@ export default {
   mounted () {
     fetch('./data/data.json').then(res => res.json())
     .then(json => {
-      console.log(json)
       this.list = json.list})
   },
   methods: {

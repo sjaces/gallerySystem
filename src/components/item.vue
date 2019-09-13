@@ -29,8 +29,8 @@ export default {
 				console.log("img", img)
 			},
 			oneMore () {
-				console.log("+1", this.item.title)
 				this.$emit('oneMore', this.item.title)
+				console.log("+1", this.item.title)
 			}
 		}
 }

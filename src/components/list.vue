@@ -16,8 +16,8 @@ export default {
 		components: { Item },
 		methods: {
 			setOneMore(item){
-				console.log("lista +1 ", item.title)
 				this.$emit('oneMore', item.title)
+				console.log("lista +1 ", item.title)
 			}
 		}
 }

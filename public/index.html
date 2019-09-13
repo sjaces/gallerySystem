@@ -1,0 +1,402 @@
+<?php
+  header("Cache-Control: max-age=60,s-maxage=60");
+?>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <?php
+      include 'consent-publi.html';
+      ?>
+      <!-- Begin comScore Tag -->
+      <!-- <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "14621244" });
+        (function() {
+          var s = document.createElement("script"),
+            el = document.getElementsByTagName("script")[0];
+          s.async = true;
+          s.src =
+            (document.location.protocol == "https:" ? "https://sb" : "http://b") +
+            ".scorecardresearch.com/beacon.js";
+          el.parentNode.insertBefore(s, el);
+        })();
+      </script>
+      <noscript>
+        <img
+          src="https://sb.scorecardresearch.com/p?c1=2&c2=14621244&cv=2.0&cj=1"
+        />
+      </noscript> -->
+      <!-- End comScore Tag -->
+  
+      <!--DataLayer Analytics y AdServer-->
+      <!-- <script>
+         //Calculamos el campo platform viendo si estamos visitando desde escritorio o móvil:
+         var platform = 'Desktop';
+         if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))
+              platform = 'Mobile';
+  
+        //Creamos el DataLayer
+        window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+              'categoria': 'Especiales', 
+              'subcategoria': '',
+              'secundarias': '',
+              'createdby': '',
+              'layout': 'galeria',
+              'titular': '##TITULO-H1-CON-GUIONES##', //Título del especial, con guiones en vez de espacios
+              'fechapublicacion': 'AAAAMMDD',  //Fecha de publicación, en el formato AÑOMESDIA
+              'keywords': '',
+              'noticia_id': '',
+              'seotag': '',
+              'platform': platform,
+              'site': 'dsv', //'dsv' para Diario de Sevilla, 'dca' para Diario de Cádiz, 'djr' para Diario de Jerez, 'sur' para Europa sur, 'edc' para El Día de Córdoba, 'grh' para Granada Hoy, 'dda' para Diario de Almería, 'hin' para Huelva Información, 'mhy' para Málaga Hoy, 'sun' para Saber Universidad
+              'lastmodify': '',
+              'title': '##TITULO-H1##', //El título, con espacios
+              'section': 'Especiales',
+              'author': 'Nombre del Autor del especial', //El autor del especial. Si hay varios, separados por coma
+              'user': '',
+              'firma': '',
+              'mediatype': '',
+              'user_logged': '',
+              'user_id': '',
+              'gaid': '',
+              'su': '',
+              'kid': ''
+          });
+      </script> -->
+      <!--Fin DataLayer Analytics y AdServer-->
+  
+      <!-- Google Tag Manager Header-->
+      <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
+        DDC: GTM-K9ZKMV
+        DDJ: GTM-PBQVW9
+        ES: GTM-5FV3C8
+        DDS: GTM-W5GDNS
+        EDC: GTM-TL84P7
+        GH: GTM-57FMMR
+        DDA: GTM-NFF8PB
+        HI: GTM-M3F442
+        MH: GTM-W2RC7Q
+      -->
+      <!-- <script>
+        (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "XXXXXXXXX");
+      </script> -->
+      <!-- End Google Tag Manager -->
+
+    <title>Gallery</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--Chartbeat head-->
+    <!--La variable _sf_async_config.domain. Sustituir por la url del diario, sin www-->
+    <!-- <script type="text/javascript">
+      var _sf_async_config = _sf_async_config || {};
+      /** CONFIGURATION START **/
+      _sf_async_config.uid = 65808;
+      _sf_async_config.domain = "diariodesevilla.es";
+      _sf_async_config.flickerControl = false;
+      _sf_async_config.useCanonical = true;
+      _sf_async_config.useCanonicalDomain = true;
+      /** CONFIGURATION END **/
+    </script>
+    <script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script> -->
+    <!--End Chartbeat head-->
+
+    <!--Una descripción del especial, necesario para buscadores. Rellenarlo sin espacios ni intros-->
+    <meta name="description" content="##DESCRIPTION##" />
+    <!--Palabras claves del especial, necesario para buscadores. Separadas por comas.-->
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <!--El autor/autores del especial, separados por comas-->
+    <meta name="author" content="autor1, autor2" />
+
+    <!--Twitter Cards-->  
+    <meta name="twitter:card" content="summary_large_image">
+    <!--El nombre del diario-->
+    <meta name="twitter:site" content="##DIARIO##">
+    <!--El nombre de usuario en TW del diario-->
+    <meta name="twitter:creator" content="@usuario-twitter">
+    <!--El título del especial para cuando se comparta en Twitter-->
+    <meta name="twitter:title" content="##TITULO-H1##">
+    <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
+    <meta name="twitter:description" content="##DESCRIPTION-CORTA##">
+    <!--URL de la imagen con la que se va a compartir en TW el especial. Puede ser cualquiera del especial-->
+    <meta name="twitter:image:src" content="https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/imagenes/nombre-imagen.jpg">  
+    
+    <!--FB Share-->
+    <!--El título del especial  para cuando se comparta en Facebook-->
+    <meta property="og:title" content="##TITULO-H1##" />
+    <meta property="og:type" content="article" />
+    <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
+    <meta property="og:description" content="##DESCRIPTION-CORTA##" />
+    <!--Palabras claves del especial. Separadas por comas.-->
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <!--La URL del especial-->
+    <meta property="og:url" content="https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php" />
+    <!--URL de la imagen con la que se va a compartir en FB el especial. Puede ser cualquiera del especial-->
+    <meta property="og:image" content="https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/imagenes/nombre-archivo.jpg" />
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+
+    <!-- Google Tag Manager Body (noscript) -->
+    <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
+      DDC: GTM-K9ZKMV
+      DDJ: GTM-PBQVW9
+      ES: GTM-5FV3C8
+      DDS: GTM-W5GDNS
+      EDC: GTM-TL84P7
+      GH: GTM-57FMMR
+      DDA: GTM-NFF8PB
+      HI: GTM-M3F442
+      MH: GTM-W2RC7Q
+    -->
+
+    <!-- <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=XXXXXXXXX"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden">
+      </iframe>
+    </noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--Chartbeat Body-->
+    <!--La variable _sf_async_config.authors. Sustituir por los Autores, separados por coma-->
+    <!--La variable _sf_async_config.title. El título del especial, como aparecerá en Chartbeat-->
+    <!-- <script type="text/javascript">
+      (function() {
+        /** CONFIGURATION START **/
+        var _sf_async_config = (window._sf_async_config =
+          window._sf_async_config || {});
+        _sf_async_config.sections = "Especiales";
+        _sf_async_config.authors = "autor1, autor2, autor3";
+        _sf_async_config.title = "##TITULO-H1##";
+        /** CONFIGURATION END **/
+        function loadChartbeat() {
+          var e = document.createElement("script");
+          var n = document.getElementsByTagName("script")[0];
+          e.type = "text/javascript";
+          e.async = true;
+          e.src = "//static.chartbeat.com/js/chartbeat.js";
+          n.parentNode.insertBefore(e, n);
+        }
+        loadChartbeat();
+      })();
+    </script> -->
+    <!--End Chartbeat Body-->
+
+    <!--Logo cabecera: El logo de cada especial. Sustituir ds por el nombre de archivo del logo de cada diario:
+DDC: dc
+DDJ: dj
+ES: es
+DDS: ds
+EDC: ed
+GH: gh
+DDA: da
+HI: hi
+MH: mh
+-->
+<nav class="navbar navbar-expand-md fixed-top">
+    <div class="container">
+      <a class="navbar-brand" id="home" href=""
+        ><img
+          id="mancheta"
+          src="./data/imagenes/manchetas/blanco/ds.png"
+          alt=""
+          class=""
+          height="35"/><b> </b
+      ></a>
+
+      <div
+        class="collapse navbar-collapse text-center justify-content-end"
+        id="navbar2SupportedContent"
+      >
+        <ul class="navbar-nav"></ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Texto e imagen de apertura escritorio. La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
+  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo">
+      <div class="row align-items-end">
+        <div class="col-md-10 col-center">
+          <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
+          <h1 class="ibm colorBlanco">
+            ##TITULO-H1##
+          </h1>
+          <!--La entradilla del especial -->
+          <p class="subtitulo">
+            Subtítulo del especial
+          </p>
+          <!--El texto de presentación del especial -->
+          <p class="colorBlanco">
+            Texto del especial
+          </p>
+        </div>
+
+      </div>
+  </header>
+       <div class="pt-3 firmaFoto">
+        <span class="fa fa-camera-retro fa-lg"> </span> Autor de la foto de portada
+      </div>
+
+  <!--Texto e imagen de apertura móvil. Debe ser igual que en la versión escritorio-->
+  <div class="postit paramovil">
+    <div class="container">
+      <div class="row ">
+        <div class="pt-3 col-md-12 ">
+          <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
+          <h1 class="ibm">
+            ##TITULO-H1##
+          </h1>
+          <!--La entradilla del especial -->
+          <p class="subtitulo">
+            Subtítulo del especial
+          </p>
+          <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
+          <img class="img-fluid" src="./data/imagenes/portada.jpg" alt="Descripción de la imagen" />
+           <div class="firmaFoto">
+            <span class="fa fa-camera-retro fa-lg"> </span> Autor de la imagen
+          </div> 
+          <!--El texto de presentación del especial -->
+          <p>
+            Texto del especial
+          </p>
+          <!-- Introducción -->
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="./data/imagenes/pixel.png" alt="" onload="compruebaCabecera()" />
+
+  <!--Información de los autores-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center firma">
+        <p>
+          <!--Autores del especial-->
+          <strong>DISEÑO Y PROGRAMACIÓN:</strong> autor1, autor2, autor3<br />
+          <!--Autores del especial-->
+          <strong>REDACCIÓN y FOTOGRAFÍA: </strong> autor
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+    <noscript>
+      <strong>We're sorry but prueba doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <!--Publicidad #1-->
+    <div id="bbt-ad-slot-right1" class="ad bbt-adv-container" style="display:none;"></div>
+
+
+     <!--Especiales relacionados: cambiamos la url de los especiales el título del mismo-->
+     <div class="container">
+        <div class="row">
+          <div class="col-12 text-center firma pt4">
+            <p>
+              <em>También te puede interesar:</em><br> <br>
+              <a href="url-especial-relacionado-1" target="blank">Título especial relacionado 1</a>
+               <br />
+               <hr style="width:15%"; color="black">
+               <a href="url-especial-relacionado-2" target="blank">Título especial relacionado 2</a>
+               <br /><hr style="width:15%"; color="black">
+               <a href="url-especial-relacionado-3" target="blank">Título especial relacionado 3</a>
+               <br /><hr style="width:15%"; color="black"><br>
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-3 text-center">
+              <a
+                id="subir"
+                href="#"
+                alt="Grupo Joly"
+                onclick="onLinkClick('home')"
+              >
+                <img
+                  class="logofooter"
+                  src="./data/imagenes/manchetas/gj.png"
+                  alt="Grupo Joly"
+                  width="300px"
+                />
+              </a>
+              <br />
+              <p class="text-muted">© Copyright 2019 Grupo Joly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!--Botones sociales: cambiamos los valores del nombre de la carpeta del especial y el título del mismo-->
+      <section id="botonera" class="">
+        <div class="boton">
+          <a
+            href="http://www.facebook.com/share.php?u=https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php&title=##TITULO-H1##"
+            target="blank"
+            onclick="javascript:window.open(this.href,
+      '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+          >
+            <i class="fa fa-fw fa-facebook fa-2x"></i>
+          </a>
+        </div>
+        <div class="boton">
+          <a
+            href="https://twitter.com/share?url=https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php&text=##TITULO-H1##. Vía @usuario-twitter"
+            target="blank"
+            onclick="javascript:window.open(this.href,
+      '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+          >
+            <i class="fa fa-fw fa-twitter fa-2x"></i>
+          </a>
+        </div>
+        <div class="boton paramovil">
+          <a
+            href="whatsapp://send?text=##TITULO-H1##. https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php"
+            data-text="##TITULO-H1##"
+            data-href="https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php"
+            class="wa_btn wa_btn_s"
+          >
+            <i class="fa fa-fw fa-whatsapp fa-2x"></i>
+          </a>
+        </div>
+      </section>
+  
+
+  </body>
+</html>

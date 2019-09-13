@@ -50,7 +50,7 @@ function pageView() {
 
 $(document).ready(function() {
   // uso el ancho de la ventana para calcular el alto de la imagen de fondo de la cabecera de la versión desktop
-  alto = window.innerWidth * 0.6145;
+  var alto = window.innerWidth * 0.6145;
   $("#imagenFondo").css("height", alto);
   $("#imagenFondo").css("background-size", "cover");
   if (alto < 800) alto = 800;
@@ -73,11 +73,11 @@ function pageVirtualViews() {
   var nodes = $(".item");
 
   for (var i = 0; i < nodes.length; i++) {
-    mielemento = nodes[i];
-    mielementoPos = $(".item:nth(" + i + ")")
+    let mielemento = nodes[i];
+    let mielementoPos = $(".item:nth(" + i + ")")
       .parent()
       .offset().top;
-    mielementoAltura = $(".item:nth(" + i + ")")
+    let mielementoAltura = $(".item:nth(" + i + ")")
       .parent()
       .height();
 

@@ -3,14 +3,11 @@
         <div class="row">
           <div class="col-12 text-center pt-5">
             <p>
-              <em>También te puede interesar:</em><br> <br>
-              <a href="url-especial-relacionado-1" target="blank">Título especial relacionado 1</a>
-               <br />
-               <hr style="width:15%" color="black">
-               <a href="url-especial-relacionado-2" target="blank">Título especial relacionado 2</a>
-               <br /><hr style="width:15%" color="black">
-               <a href="url-especial-relacionado-3" target="blank">Título especial relacionado 3</a>
-               <br /><hr style="width:15%" color="black"><br>
+              <em>También te puede interesar:</em><br> 
+              <template v-for="item of teInteresa">
+                <LinkPublicacion :linkPublicacion="item" :key="item.title"></LinkPublicacion>
+              </template>
+              
             </p>
           </div>
         </div>
@@ -19,8 +16,15 @@
 </template>
 
 <script>
+import LinkPublicacion from './linkPublication.vue'
 export default {
-
+  props: {
+    teInteresa: {
+      type: Array,
+      required: true
+    }
+  },
+  components: { LinkPublicacion }
 }
 </script>
 

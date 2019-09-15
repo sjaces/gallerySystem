@@ -1,7 +1,7 @@
 <template lang="pug"> 
 		transition-group(name="flip-list", tag="ul")
 			li(v-for='item in list', v-bind:key="item.title")
-				Item(:item='item' v-on:oneMore="setOneMore(item)")
+				Item(:item='item' v-on:oneMore="setOneMore(item)" :votes="votes")
 </template>
 
 <script>
@@ -11,7 +11,10 @@ export default {
         list: {
             type: Array,
             required: true
-        }
+        },
+		votes:{
+			type: Boolean
+		}
 		},
 		components: { Item },
 		methods: {
@@ -27,7 +30,7 @@ export default {
 .flip-list-move {
   transition: transform 1s;
 }
-	/* li {
+	li {
 		list-style: none
-	} */
+	}
 </style>

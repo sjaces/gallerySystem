@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang="pug" scoped>
 	.postit
 		.container
 			.row
@@ -8,11 +8,12 @@
 					.firmaFoto
 						span.fa.fa-camera-retro.fa-lg {{ item.photographer }}
 					h2.lead
-						span.colorDestacado {{ item.rank }}. 
+						span.colorDestacado {{ item.votes }}. 
 						| {{ item.title }}
-					p.text-left {{ item.text }}
-					p Puntos: {{ item.rank }}
-					button.brn.btn-primary(@click="oneMore") +1
+					p.text-left(:id="item.title")
+					template(v-if="votes")
+						p Puntos: {{ item.votes }}
+						button.brn.btn-primary(@click="oneMore") +1
     
 </template>
 
@@ -22,7 +23,13 @@ export default {
         item: {
             type: Object,
             required: true
-        }
+        },
+		votes: {
+			type: Boolean
+		}
+		},
+		mounted() {
+			document.getElementById(this.item.title).innerHTML = this.item.text
 		},
 		methods: {
 			fixFirma () {

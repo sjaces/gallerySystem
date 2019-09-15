@@ -1,10 +1,10 @@
 <template lang="pug">
   section
     #app
-      Headers
-      Authors
-      List(:list="orderedList" v-on:oneMore="oneMore")
-      Recomendations
+      Headers(:newspaper="newspaper")
+      Authors(:athors="newspaper.authors")
+      List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
+      Recomendations(:teInteresa="teInteresa")
       Footer
       ShareButtons
 </template>
@@ -24,6 +24,7 @@ import "./assets/css/personalizado.css";
 import "./assets/js/animate-in.js";
 import "./assets/js/vistasDs.js";
 
+
 // import 'bootstrap'
 export default {
   name: "app",
@@ -31,12 +32,20 @@ export default {
   data() {
     return {
       newspaper: {},
-      list: []
+      list: [],
+      teInteresa: [],
+      cover: {}
     };
   },
   computed: {
     orderedList() {
-      return this.order(this.list);
+      if(this.newspaper.ordered){
+        console.log("Fotos ordenadas")
+        return this.order(this.list)
+      }else{
+        console.log("Fotos desordenadas")
+        return this.list
+      }
     }
   },
   mounted() {
@@ -45,15 +54,18 @@ export default {
       .then(json => {
         this.list = json.list
         this.newspaper = json.newspaper
+        this.teInteresa = json.teInteresa
+        this.cover = json.cover
+        this.redefiningColors()
       });
   },
   methods: {
     order(list) {
       let orderedList = list.sort(function(a, b) {
-        if (a.rank > b.rank) {
+        if (a.votes > b.votes) {
           return 1;
         }
-        if (a.rank < b.rank) {
+        if (a.votes < b.votes) {
           return -1;
         }
         return 0;
@@ -69,11 +81,28 @@ export default {
         return item === el.title;
       });
       // console.log("myItem", myItem)
-      this.list[myItem].rank += 1;
+      this.list[myItem].votes += 1;
+    },
+    redefiningColors() {
+      document.body.style.setProperty('--fondo', this.newspaper.backgroundColor)
+        document.body.style.setProperty('--color', this.newspaper.color)
+        document.body.style.setProperty('--colorDestacado', this.newspaper.mainColor)
+        document.body.style.setProperty('--fondoBarra', this.newspaper.headerBackground)
+        document.body.style.setProperty('--colorRedes', this.newspaper.sharer)
+        document.body.style.setProperty('--colorSobre', this.newspaper.over)
+        
+        console.log("newspaper", this.newspaper)
+        console.log("colores", this.newspaper.backgroundColor, this.newspaper.color, this.newspaper.mainColor)
     }
+    
   }
 };
 </script>
 
-<style lang="scss">
+<style>
+.LinkPublicacion:last-child {
+      /* width:15%; */
+      /* border-bottom: 1px solid yellow;
+      border-bottom-width: 15%; */
+  }
 </style>

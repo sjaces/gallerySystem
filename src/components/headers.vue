@@ -1,12 +1,11 @@
 <template>
 <div>
-
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container">
       <a class="navbar-brand" id="home" href=""
         ><img
           id="mancheta"
-          src="../../public/data/imagenes/manchetas/blanco/ds.png"
+          :src="logo"
           alt=""
           class=""
           height="35"/><b> </b
@@ -27,15 +26,15 @@
         <div class="col-md-10 col-center">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
           <h1 class="ibm colorBlanco">
-            ##TITULO-H1##
+            {{ newspaper.titleH1 }}
           </h1>
           <!--La entradilla del especial -->
           <p class="subtitulo">
-            Subtítulo del especial
+            {{ newspaper.subtitle }}
           </p>
           <!--El texto de presentación del especial -->
           <p class="colorBlanco">
-            Texto del especial
+            {{newspaper.description}}
           </p>
         </div>
 
@@ -51,11 +50,11 @@
         <div class="pt-3 col-md-12 ">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
           <h1 class="ibm">
-            ##TITULO-H1##
+            {{ newspaper.titleH1 }}  ##TITULO-H1##
           </h1>
           <!--La entradilla del especial -->
           <p class="subtitulo">
-            Subtítulo del especial
+            {{ newspaper.subtitle }}
           </p>
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
           <img class="img-fluid" src="../../public/data/imagenes/portada.jpg" alt="Descripción de la imagen" />
@@ -64,7 +63,7 @@
           </div> 
           <!--El texto de presentación del especial -->
           <p>
-            Texto del especial
+            {{newspaper.description}}
           </p>
           <!-- Introducción -->
           <br />
@@ -79,15 +78,24 @@
 
 <script>
 import cabeceras from '../assets/js/cabeceras.min'
+import { nsend } from 'q'
 // import VueRouter from 'vue-router'
 var myCabeceras = require('../assets/js/cabeceras.min.js')
 // import cabeceras from "../assets/js/cabeceras.min.js"
 
 export default {
-  data () {
-    return {
-
-      // doc: this.$route.params.first
+  props: {
+    newspaper:{
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    logo() {
+      if(this.newspaper){
+        return `./data/imagenes/manchetas/${this.newspaper.logos}/${this.newspaper.cabecera}.png`
+      }
+      return ''
     }
   },
   methods: {

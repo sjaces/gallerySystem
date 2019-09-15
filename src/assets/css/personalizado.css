@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:200);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
 :root {
-    --color: rgb(0, 0, 0);
+    --color: rgb(250, 246, 246);
     --fondo: rgb(0, 0, 0);
     --fondoBarra: rgb(0, 0, 0);
     --colorSobre: rgb(0, 0, 0);
@@ -54,12 +54,12 @@ a {
 }
 
 a:hover {
-    color: --colorSobre;
+    color: var(--colorSobre);
     font-weight: 700
 }
 
 p {
-    color: #FFF;
+    color: var(--color);
 }
 
 .navbar {
@@ -87,7 +87,7 @@ p {
     font-weight: 700;
     text-align: center!important;
     line-height: 30px;
-    color: #FFF;
+    color: var(--color);
 }
 
 .magenarriba {
@@ -180,7 +180,7 @@ p {
     font-family: 'IBM Plex Serif', serif;
     font-weight: 500;
     margin-top: 25px;
-    color: #FFF;
+    color: var(--color);
 }
 
 h1.ibm strong {
@@ -210,11 +210,11 @@ h1.ibm strong {
 
 .firmaFoto {
     text-align: right;
-    margin-top: -1.7em;
+    /* margin-top: -1.7em; */
     font-size: .7em;
     font-weight: 300;
     min-height: 1.7em;
-    color: #FFF;
+    color: var(--color);
 }
 
 .flex {
@@ -242,7 +242,7 @@ h1.ibm strong {
     font-size: 1.33333333em;
     line-height: .75em;
     vertical-align: -15%;
-    color: #fff;
+    color: var(--color);
 }
 
 @media (max-width:800px) {
@@ -254,8 +254,7 @@ h1.ibm strong {
         margin: 0 auto;
         bottom: 10px;
         font-size: 13px;
-        width: 40%;
-        min-width: 200px;
+        width: 200px;
         padding: 10px 10px 5px 10px;
         right: 0;
         left: 0;

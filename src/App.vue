@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     #app
-      Headers(:newspaper="newspaper")
+      Headers(:newspaper="newspaper" :cover="cover")
       Authors(:athors="newspaper.authors")
       List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
       Recomendations(:teInteresa="teInteresa")

@@ -2,10 +2,12 @@
 		transition-group(name="flip-list", tag="ul")
 			li(v-for='item in list', v-bind:key="item.title")
 				Item(:item='item' v-on:oneMore="setOneMore(item)" :votes="votes")
+				Banner(v-if="showBanner(item)" :number="(number(item)/ratioBanners)") 
 </template>
 
 <script>
 import Item from './item.vue'
+import Banner from './banner.vue'
 export default {
     props: {
         list: {
@@ -16,11 +18,37 @@ export default {
 			type: Boolean
 		}
 		},
-		components: { Item },
+		components: { Item, Banner },
+		computed:{
+			totalItems(){
+				if(this.list){
+					return this.list.length
+				}
+			},
+			ratioBanners(){
+				if(this.totalItems>10){
+					return 5
+				}else{return 3}
+			}
+			// position(e){
+			// 	return this.list.indexOf(e)
+			// }
+		},
 		methods: {
 			setOneMore(item){
 				this.$emit('oneMore', item.title)
 				console.log("lista +1 ", item.title)
+			},
+			showBanner(item){
+				console.log(this.number(item))
+				if(this.number(item) % this.ratioBanners) { console.log(false)
+				return false
+				}else{ 
+				console.log(true)
+				return true }
+			},
+			number(item){
+				return (this.list.indexOf(item) + 1)
 			}
 		}
 }

@@ -41,7 +41,7 @@
       </div>
   </header>
        <div class="pt-3 firmaFoto">
-        <span class="fa fa-camera-retro fa-lg"> </span> Autor de la foto de portada
+        <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
       </div>
 
   <div class="postit paramovil">
@@ -50,16 +50,16 @@
         <div class="pt-3 col-md-12 ">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
           <h1 class="ibm">
-            {{ newspaper.titleH1 }}  ##TITULO-H1##
+            {{ newspaper.titleH1 }}
           </h1>
           <!--La entradilla del especial -->
           <p class="subtitulo">
             {{ newspaper.subtitle }}
           </p>
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
-          <img class="img-fluid" src="../../public/data/imagenes/portada.jpg" alt="Descripción de la imagen" />
+          <img class="img-fluid" :src="cover.img_src" :alt="cover.alt" />
            <div class="firmaFoto">
-            <span class="fa fa-camera-retro fa-lg"> </span> Autor de la imagen
+            <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
           </div> 
           <!--El texto de presentación del especial -->
           <p>
@@ -88,6 +88,10 @@ export default {
     newspaper:{
       type: Object,
       required: true
+    },
+    cover:{
+      type: Object,
+      required: true
     }
   },
   computed: {
@@ -101,8 +105,8 @@ export default {
   methods: {
         checkNewspaper () {
             // console.log("Checking Newspaper")
-            console.log("Checking Newspaper", myCabeceras)
-            console.log("Checking Newspaper", this)
+            // console.log("Checking Newspaper", myCabeceras)
+            // console.log("Checking Newspaper", this)
             cabeceras()
             // myCabeceras()
         }

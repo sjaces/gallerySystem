@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/gg/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/lab/miniapps/piezas/galeria/" : "/"
 };

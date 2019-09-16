@@ -1,20 +1,22 @@
 { 
   "newspaper": {
     "cabecera": "ds",
-    "name": "Diario de Sevilla",
-    "fechapublicacion": "AAAAMMDD",
-    "site": "dsv",
-    "domain": "diariodesevilla.es",
-    "titleH1": "##TITULO-H1## json",
-    "subtitle": "Er subtítulo",
-    "shortDescription": "##SHORT-DESCRIPTION##",
-    "description": "##DESCRIPTION## json",
-    "keywords": [],
-    "twitterSite": "diariosevilla",
-    "URL": "url",
+    "name": "Diario de Sevilla????",
+    "fechapublicacion": "AAAAMMDD ?????",
+    "site": "dsv????",
+    "googleCode": "GTM-W5GDNS ???????",
+    "domain": "diariodesevilla.es?????",
+    "title": "Title SEO????",
+    "titleH1": "##TITULO-H1## json?????",
+    "subtitle": "Er subtítulo ???????????????",
+    "shortDescription": "##SHORT-DESCRIPTION##?????",
+    "description": "##DESCRIPTION## json?????",
+    "keywords": ["keyone", "keytwo", "keythree"],
+    "twitterSite": "diariosevilla?????",
+    "URL": "url?????",
     "authors": [{
-      "name": "Ángel J Cachón de Elías",
-      "twitter": "sjaces"
+      "name": "Ángel J Cachón de Elías?????",
+      "twitter": "sjaces?????"
     }],
     "ordered": false,
     "logos": "color",
@@ -26,7 +28,7 @@
     "over": "blue"
   },
   "cover":{
-    "img_src": ".data/imagenes/portada.jpg",
+    "img_src": "./data/imagenes/portada.jpg",
     "alt": "portada",
     "photographer": "Pepito el Fotógrafo"
   },
@@ -43,6 +45,49 @@
       "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
       "photographer": "Juan carlos Vazquez",
       "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hnán.",
+      "votes": 1
+    },
+    {
+      "title": "Primeros",
+      "img_src": "./data/imagenes/2. CALA ENMEDIO Rafael González.jpg",
+      "photographer": "Juan carlos Vazquez",
+      "text": "Acaba de publicar su trabajo Hná asf adf dasf asdfn.",
       "votes": 1
     },
     {

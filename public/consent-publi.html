@@ -1,0 +1,143 @@
+<script>// Didomi SDK
+// https://developers.didomi.io/privacy-management/sdk-and-api/sdk/website-setup
+
+var gdprAppliesGlobally = true;
+
+(function(){function n(){if(!window.frames.__cmpLocator){if(document.body&&document.body.firstChild){var e=document.body;var t=document.createElement("iframe");t.style.display="none";t.name="__cmpLocator";e.insertBefore(t,e.firstChild)}else{setTimeout(n,5)}}}function e(e,t,n){if(typeof n!=="function"){return}if(!window.__cmpBuffer){window.__cmpBuffer=[]}if(e==="ping"){n({gdprAppliesGlobally:gdprAppliesGlobally,cmpLoaded:false},true)}else{window.__cmpBuffer.push({command:e,parameter:t,callback:n})}}e.stub=true;function t(a){if(!window.__cmp||window.__cmp.stub!==true){return}if(!a.data){return}var r=typeof a.data==="string";var e;try{e=r?JSON.parse(a.data):a.data}catch(t){return}if(e.__cmpCall){var i=e.__cmpCall;window.__cmp(i.command,i.parameter,function(e,t){var n={__cmpReturn:{returnValue:e,success:t,callId:i.callId}};a.source.postMessage(r?JSON.stringify(n):n,"*")})}}if(typeof window.__cmp!=="function"){window.__cmp=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}n()})();
+
+window.didomiConfig = {
+    languages: {
+        enabled: ['es'],
+        default: 'es'
+    },
+    tagManager: {
+        provider: 'didomi'
+    },
+    notice: {
+        position: 'bottom',
+        closeOnClick: true,
+        content: {
+            notice: {
+                es: 'Utilizamos cookies propias y de terceros y tecnologías similares para almacenar y administrar las preferencias del Usuario, enviar publicidad adaptada al Usuario, habilitar contenido y recolectar datos analíticos y de uso, así como para garantizar el correcto funcionamiento de esta web. Si continua navegando por esta web, estará aceptando su instalación en los términos indicados en nuestra <a href="https://www.diariodesevilla.es/cookies/" target="_blank">Política de cookies</a>'
+            },
+            dismiss: {
+                es: 'Estoy de acuerdo'
+            },
+            learnMore: {
+                es: 'Quiero saber más'
+            }
+        }
+    },
+    preferences: {
+        defaultChoice: true,
+        content: {
+            title: {
+                es: '<h2>Bienvenido a Grupo Joly</h2>'
+            },
+            text: {
+                es: '<article class="pg-content"> <header class="pg-head"> <h2 class="pg-bkn-headline "> Política de Privacidad </h2><!-- .pg-bkn-headline --> </header><!-- .pg-head --> <div class="pg-body"> <div itemprop="articleBody" class="mce-body "><h3 class="mce">Nuestra politica de privacidad</h3><p class="mce">JOLY DIGITAL, S.L. es la sociedad responsable del tratamiento de los datos de carácter personal que se traten a través de esta página web y sus subdominios (el "Sitio Web"). Puedes consultar la información relativa a la sociedad que gestiona el Sitio Web (la "Sociedad") visitando al Aviso Legal que aparece al pie de la página principal. <p><p class="mce">La presente Política de Privacidad tiene por objeto facilitar información sobre los derechos que asisten tanto al Usuario como al Visitante en virtud del Reglamento General de Protección de Datos ("RGPD"). Si tienes cualquier duda relativa al tratamiento de tus datos personales, contacta con la Sociedad en la dirección rgpd@grupojoly.com</p><p class="mce">El respeto a tu privacidad es fundamental para nosotros por lo que queremos informarte con toda transparencia de los tratamientos que podemos realizar con tus datos personales a fin de que puedas tomar una decisión al respecto. El principal objetivo de nuestra Política de Privacidad es garantizar el total cumplimiento de la normativa vigente en materia de protección de datos y privacidad y la seguridad en el tratamiento de tus datos personales.</p><h3 class="mce">Información personal que recopilamos sobre ti</h3> <p class="mce">La información que recopilamos sobre ti y cómo lo hacemos puede variar dependiendo de los servicios que utilices y a los que te suscribas, del uso que hagas del Sitio Web o de la información que hemos obtenido de un tercero con tu permiso para compartirla con nosotros.</p> <p class="mce"><b>Finalidades</b></p> <p class="mce">JOLY DIGITAL, S.L. podrá tratar tus datos personales para las siguientes finalidades: <ol class="mce "> <li><span>Gestión de los servicios asociados a cada producto solicitado, entre otros, gestión del cobro del producto, envío de los periódicos o productos adquiridos</span></li> <li><span>Gestión de tus datos personales para el registro como usuario</span></li> <li><span>Remisión de boletines informativos o newsletters asociados a las secciones o ediciones que conforman el Sitio Web, incluyéndose aquellos requeridos para dar cumplimiento a los requisitos legales del RGPD</span></li> <li><span>Gestión de plataformas sociales titularidad o asociadas a JOLY DIGITAL, S.L.</span></li> <li><span>Prestación del servicio de comunicación de ediciones digitales</span></li> <li><span>Participación en sorteos, promociones y eventos</span></li> <li><span>Publicaciones en blogs/foros</span></li> <li><span>Comentarios a noticias</span></li> <li><span>Análisis estadísticos, investigación y perfiles en virtud de la navegación o intereses respecto a los contenidos, en aras a poder mejorar el servicio</span></li> <li><span>Cookies propias y de terceros basadas en preferencias</span></li> <li><span>Contacto, resolución de incidencias, gestión de consultas asociadas al servicio o a cualquier otra situación análoga en relación con JOLY DIGITAL, S.L.</span></li> </ol> </p> <p class="mce"><b>Base jurídica</b></p> <p class="mce">JOLY DIGITAL, S.L. trata o tratará tus datos personales lícitamente con base en las siguientes condiciones, las cuales pueden ser independientes o complementarias: <ol class="mce "> <li><span>Gestión de la relación contractual: la prestación de los servicios solicitados a la Sociedad constituye una relación de prestación de servicios, aun cuando los mismos sean gratuitos</span></li> <li><span>Consentimiento inequívoco</span></li> <li><span>Interés legítimo para seguir prestando el servicio bajo los parámetros de calidad y mejora</span></li> <li><span>Interés legítimo de la Sociedad para atender a los requerimientos de información o reclamaciones planteadas por suscriptores como por usuarios de cualquier servicio</span></li> <li><span>En base a una norma de derecho o en interés público</span></li> </ol> </p> <h3 class="mce">Destinatarios</h3> <p class="mce">JOLY DIGITAL, S.L. para desarrollar su actividad precisa que, con la finalidad de poder garantizar el servicio y la calidad del mismo, terceros presten servicios que pudieren llevar afectos tratamiento de datos personales.</p> <p class="mce">En relación a dichos terceros, JOLY DIGITAL, S.L. diferencia entre aquellos terceros que ostentan la condición de Encargado de Tratamiento y los cuales son necesarios para el objeto expuesto, habiendo adecuado las medidas legales y técnicas necesarias para preservar tu derecho fundamental a la protección de datos. Así mismo, en relación con aquellos terceros que no se encuentren en dicha situación, JOLY DIGITAL, S.L. te informará de la comunicación y la necesidad, en su caso, de obtener consentimiento para el tratamiento afecto a la operación/es afectas.</p> <p class="mce">Entre los destinatarios principales afectos al servicio de comunicación digital destacan las empresas o entidades vinculadas o gestoras en relación a la edición de secciones y contenidos disponibles y reproducibles a través de los dominios titularidad de aquellas así como los servidores sitos en la Unión Europea y servicios de medición de preferencias (sociodemográficas; dispositivos, estadísticas, marketing, anuncios) y entidades asociadas a la publicidad (anunciantes, agencias de medios, soportes publicitarios) que, en virtud del servicio referido, precisan la data asociada, no siendo responsable JOLY DIGITAL, S.L. del uso de la misma por aquellas. Al respecto, JOLY DIGITAL, S.L. pone a disposición y recomienda la lectura de la información asociada al presente ámbito en la Política de Cookies. </p> <p class="mce">Se podrán realizar transferencias internacionales de tus datos personales a prestadores de servicios de la Sociedad. Estos prestadores pueden estar ubicados en estados fuera del Espacio Económico Europeo. Cuando no se haya declarado que cuentan con un nivel de protección equivalente al europeo, la Sociedad adoptará las correspondientes cláusulas contractuales tipo.</p> <h3 class="mce">Redes Sociales</h3> <p class="mce">JOLY DIGITAL, S.L. tiene presencia en distintos medios o redes sociales, tales como Facebook, Twitter, Instagram, etc. siendo la finalidad del tratamiento de datos personales las establecidas dentro de las condiciones afectas al servicio. </p> <p class="mce">En el caso que el registro a determinados servicios se efectuare mediante datos personales asociados a una cuenta de usuario, se te informará de que compartirás determinada información contenida en tu cuenta. La Sociedad recuerda que debes conocer las políticas de privacidad de dichos medios o redes sociales en los que estés registrado en aras a evitar compartir información no deseada. JOLY DIGITAL, S.L. podrá efectuar concursos y sorteos a través de los distintos medios o redes sociales, solicitándote consentimiento para que, en el caso de participar y resultar ganador, se publiquen los datos asociados a tu persona. Dispones de las configuraciones de privacidad y gestión de la cuenta en las redes sociales para gestionar las preferencias de privacidad, identidad, publicidad y demás extremos afectos.</p> <h3 class="mce">Seguridad</h3> <p class="mce">JOLY DIGITAL, S.L. adopta medidas organizativas y técnicas con la finalidad de garantizar la seguridad de los datos de carácter personal y evitar su alteración, pérdida, tratamiento o acceso no autorizado, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural, no siendo responsable de cualquier pérdida, extravío o manipulación de datos no autorizada y ajena a la voluntad de aquella. La principal misión es intentar asegurar y garantizar tanto el tratamiento de datos personales como la información asociada, velando por su custodia e integridad. No obstante, no podemos aceptar ningún tipo de responsabilidad en caso de acceso no autorizado o pérdida de información personal que esté fuera de nuestro control.</p> <p class="mce">Nuestro Sitio Web puede proveer enlaces a páginas web de terceros. No somos responsables de la seguridad ni del contenido de sus páginas web.Asegúrate de leer la política de privacidad y la política de cookies de dichas compañías antes de usar o introducir información personal en sus páginas web. </p> <h3 class="mce">Confidencialidad</h3> <p class="mce">Los datos personales que podamos recabar a través del Sitio Web o por medio de las distintas comunicaciones que mantengamos contigo serán tratados con confidencialidad, comprometiéndonos a guardar secreto respecto de los mismos de acuerdo con lo establecido en la legislación aplicable.</p> <h3 class="mce">Por cuánto tiempo guardamos tu información personal</h3> <p class="mce">Los datos personales proporcionados serán conservados durante el tiempo necesario para cumplir la finalidad para la cual se recogieron. Si tus datos se utilizan para varias finalidades que nos obligan a conservarlos durante plazos diferentes, aplicaremos el plazo de conservación más largo. En todo caso, limitamos el acceso a tus datos sólo a aquellas personas que necesiten utilizarla para el desempeño de sus funciones.</p> <p class="mce">Nuestros plazos de conservación de datos están basados en necesidades de negocio, por lo que en relación con aquellos datos personales que ya no sean necesarios bien quedará limitado el acceso a los mismos al cumplimiento de obligaciones estrictamente legales o bien se destruirán de forma segura.</p> <h3 class="mce">Tus derechos</h3> <p class="mce">Te informamos que podrás ejercer los siguientes derechos: <ol class="mce "> <li><span>Derecho de acceso a tus datos personales para saber cuáles están siendo objeto de tratamiento y las operaciones de tratamiento llevadas a cabo con ellos</span></li> <li><span>Derecho de rectificación de cualquier dato personal inexacto</span></li> <li><span>Derecho de supresión de tus datos personales, cuando esto sea posible</span></li> <li><span>Derecho a solicitar la limitación del tratamiento de tus datos personales cuando la exactitud, la legalidad o la necesidad del tratamiento de los datos resulte dudosa, en cuyo caso, podremos conservar los datos conservarlos para el ejercicio o la defensa de reclamaciones</span></li> <li><span>Derecho de oposición al tratamiento de tus datos personales, cuando la base legal que nos habilite para su tratamiento sea el interés legítimo. La Sociedad dejará de tratar tus datos salvo que tenga un interés legítimo imperioso o para la formulación, el ejercicio o la defensa de reclamaciones</span></li> <li><span>Derecho a la portabilidad de tus datos, cuando la base legal que nos habilite para su tratamiento sea la existencia de una relación contractual o tu consentimiento</span></li> <li><span>Derecho a revocar el consentimiento otorgado a la Sociedad</span></li> </ol> </p> <p class="mce">Podrás ejercitar tus derechos en cualquier momento de las siguientes formas: <ol class="mce "> <li><span>Dirigiendo un correo electrónico a la dirección <b>rgpd@grupojoly.com</b> indicando el derecho que deseas ejercitar, tus datos identificativos y acompañando copia del D.N.I. o cualquier otro medio válido que permita acreditar tu identidad</span></li> <li><span>Dirigiendo una solicitud escrita a JOLY DIGITAL, S.L.U. con domicilio en calle Rioja, nº 14-16, 41001 Sevilla, indicando el derecho que deseas ejercitar, tus datos identificativos y acompañando copia del D.N.I. o cualquier otro medio válido que permita acreditar tu identidad</span></li> </ol> </p> <p class="mce">Por otra parte te informamos que tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos si consideras que se ha cometido una infracción de la legislación en materia de protección de datos respecto al tratamiento de tus datos personales.</p> <p class="mce">También puedes consultar la política de privacidad completa de Joly Digital <a href="https://www.diariodesevilla.es/politica_de_privacidad/" target="_blank">aquí</a>.</p> </div><!-- .mce-body --> </div><!-- .pg-body --> </article>'},
+            save: {
+                es: 'Guardar'
+            }
+        },
+        information: {
+            enable: true,
+            content: {
+                text: {
+                    es: '<p>Los portales de Grupo Joly, al igual que la mayoría de portales en Internet, usan cookies para mejorar la experiencia del usuario. A continuación encontrará información sobre qué son las cookies, qué tipo de cookies utiliza este portal, cómo puede desactivar las cookies en su navegador y cómo desactivar específicamente la instalación de cookies de terceros. Si no encuentra la información específica que usted está buscando, por favor diríjase a <b>rgpd@grupojoly.com</b></p><p> Las cookies son pequeños archivos que algunas plataformas, como las páginas web, pueden instalar en su ordenador, smartphone, tableta o televisión conectada. Sus funciones pueden ser muy variadas: almacenar sus preferencias de navegación, recopilar información estadística, permitir ciertas funcionalidades técnicas, etcétera. En ocasiones, las cookies se utilizan para almacenar información básica sobre los hábitos de navegación del usuario o de su equipo, hasta el punto, según los casos, de poder reconocerlo.</p><p>Las cookies son útiles por varios motivosLas cookies son útiles por varios motivos. Desde un punto de vista técnico, permiten que las páginas web funcionen de forma más ágil y adaptada a sus preferencias, como por ejemplo almacenar su idioma o la moneda de su país. Además, ayudan a los responsables de los sitios web a mejorar los servicios que ofrecen, gracias a la información estadística que recogen a través de ellas. Finalmente, sirven para hacer más eficiente la publicidad que le mostramos, gracias a la cual le podemos ofrecer servicios de forma gratuita.</p><p>Puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de su navegador de internet. En el caso en que las bloquee, es posible que ciertos servicios que necesitan su uso no estén disponibles para usted. A continuación le ofrecemos enlaces en los que encontrará información sobre cómo puede activar sus preferencias en los principales navegadores:</p><p><ul><li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank">Google Chrome</a></li><li><a href="http://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-?redirectlocale=en-US&redirectslug=Cookies" target="_blank">Mozilla Firefox</a></li><li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">Internet Explorer</a></li><li><a href="http://support.apple.com/kb/PH5042?viewlocale=es_EShttp://support.apple.com/kb/HT1677?viewlocale=es_ES" target="_blank">Safari</a></li><li><a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES&locale=es_ES" target="_blank">Safari para IOS (iPhone, iPad)</a></li><li><a href="http://www.macromedia.com/support/documentation/es/flashplayer/help/settings_manager07.html" target="_blank">Cookies Flash</a></li></ul></p><p>Para modificar su consentimiento sobre las cookies que tanto nuestros partners como nosotros utilizamos en nuestro sitio web para personalizar contenido y publicidad, proporcionar funcionalidades a las redes sociales, o analizar nuestro tráfico, puede hacer click aquí.</p><p>Finalmente, puede usted dirigirse al portal <a href="http://www.youronlinechoices.com/es/" target="_blank" rel="nofollow"><b>Your Online Choices</b></a> dónde además de encontrar información útil, podrá configurar, proveedor por proveedor, sus preferencias sobre las cookies publicitarias de terceros. Si desea contactar con nosotros respecto nuestra política de cookies, puede hacerlo en <b>rgpd@grupojoly.com</b></p><p><a href="https://www.diariodecadiz.es/cookies/" target="_blank">https://www.diariodesevilla.es/cookies/</a></p>'
+                },
+                learnMore: {
+                    es: 'Quiero saber más'
+                },
+                agreeAndClose: {
+                    es: 'Estoy de acuerdo'
+                }
+            }
+        }
+    },
+    website: {
+        apiKey: "6e7011c3-735d-4a5c-b4d8-c8b97a71fd01",
+        name: "Grupo Joly",
+        privacyPolicyURL: "https://www.diariodesevilla.es/politica_privacidad/",
+        vendors: {
+            didomi: ["google"],
+            iab: {
+                all: true
+            },
+        }
+    }
+};
+
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) {
+
+    // Custom scroll integration
+    var attachEvents = function()
+    {
+        window.addEventListener('scroll', setUserAgree, false);
+    };
+
+    var removeEvents = function()
+    {
+        window.removeEventListener('scroll', setUserAgree, false);
+    };
+
+    var setUserAgree = function()
+    {
+        removeEvents();
+        Didomi.setUserAgreeToAll();
+    };
+
+    if (Didomi.notice.isVisible())
+    {
+        attachEvents();
+    }
+    else
+    {
+        Didomi.on('notice.shown', function() {
+            attachEvents();
+        });
+    }
+
+    // Custom DFP integration to set anonymous or personalized requests
+    var setDFPAnonymousRequests = function() {
+        setDFPAnonymousOrPersonalizedRequests(1);
+    };
+
+    var setDFPPersonalizedRequests = function() {
+        setDFPAnonymousOrPersonalizedRequests(0);
+    };
+
+    var setDFPAnonymousOrPersonalizedRequests = function(value) {
+        window.googletag = window.googletag || {};
+        window.googletag.cmd = window.googletag.cmd || [];
+
+        window.googletag.cmd.push(function () {
+            window.googletag.pubads().setRequestNonPersonalizedAds(value);
+        });
+    };
+
+    var consentStatus = Didomi.getUserConsentStatusForVendor('google');
+    if (consentStatus === true) {
+        setDFPPersonalizedRequests();
+    } else if (consentStatus === false) {
+        setDFPAnonymousRequests();
+    } else { // consentStatus === undefined
+        setDFPAnonymousRequests(); // use anonymous when consent is unknown
+
+        Didomi.on('consent.changed', function () {
+            removeEvents();
+
+            var consentStatus = Didomi.getUserConsentStatusForVendor('google');
+            if (consentStatus === true) {
+                setDFPPersonalizedRequests()
+            } else {
+                setDFPAnonymousRequests();
+            }
+        });
+    }
+});</script>
+<script type="text/javascript" id="spcloader" src="https://sdk.privacy-center.org/loader.js" async></script>
+<script>
+    !function(){window.hb_now=Date.now();var e=document.getElementsByTagName("script")[0],t="https://hb.20m.es/stable/config/grupojoly.com/desktop.min.js";var n=document.createElement("script");n.async=!0,n.src=t,e.parentNode.insertBefore(n,e)}();
+</script>

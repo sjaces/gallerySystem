@@ -11,7 +11,7 @@
               >
                 <img
                   class="logofooter"
-                  src="../../public/data/imagenes/manchetas/color/gj.png"
+                  src="../../public/data/manchetas/color/gj.png"
                   alt="Grupo Joly"
                   width="300px"
                 />

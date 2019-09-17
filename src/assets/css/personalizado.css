@@ -2,14 +2,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:200);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
 :root {
-    --color: rgb(250, 246, 246);
-    --fondo: rgb(0, 0, 0);
-    --fondoBarra: rgb(0, 0, 0);
-    --colorSobre: rgb(0, 0, 0);
-    --colorRedes: rgb(0, 0, 0);
+    --color: rgb(0, 0, 0);
+    --fondo: #FFFFFF;
+    --fondoBarra: #FFFFFF;
+    --colorSobre: #FFFFFF;
+    --colorRedes: #FFFFFF;
+    --colorDestacado: #000;
     /*Descomentamos según el diario que sea*/
     /*DDS*/
-    --colorDestacado: #e0bc17;
+    /* --colorDestacado: #e0bc17; */
     /*MH*/
     /*--colorDestacado: #0F7EAA;*/
     /*GH*/

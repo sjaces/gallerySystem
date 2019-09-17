@@ -3,11 +3,11 @@
     <div class="row">
       <div class="col-12 text-center firma">
         <p class="authors">
-          <strong>DISEÑO Y PROGRAMACIÓN:</strong> 
+          <strong>DISEÑO Y PROGRAMACIÓN: </strong> 
           <span v-for="item in designers" class="coma" :key="item.name"> {{ item.name }}</span>
         </p>
         <p class="authors">
-          <strong>REDACCIÓN y FOTOGRAFÍA:</strong>
+          <strong>REDACCIÓN: </strong>
           <span v-for="item in writers" class="coma" :key="item.name"> {{ item.name }}</span>
         </p>
       </div>
@@ -19,7 +19,7 @@
 export default {
   props: {
     authors: {
-      type: Object,
+      
       required: true
     }
   },
@@ -28,11 +28,13 @@ export default {
       if(this.authors){
         let designers = this.authors.filter(item => item.role === 'designer')
         return designers
-      }
+      }else{return ''}
     },
     writers() {
-      let writers = this.authors.filter(item => item.role === 'writer')
+      if(this.authors){
+        let writers = this.authors.filter(item => item.role === 'writer')
       return writers
+      }else{return ''}
     }
   }
 };

@@ -6,7 +6,7 @@
       List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
       Recomendations(:teInteresa="teInteresa")
       Footer
-      ShareButtons
+      ShareButtons(:newspaper="newspaper")
 </template>
 
 <script>

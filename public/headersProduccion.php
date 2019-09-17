@@ -97,3 +97,43 @@
       </script>
       <script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script> -->
       <!--End Chartbeat head-->
+
+      
+
+    
+
+    <!--Una descripción del especial, necesario para buscadores. Rellenarlo sin espacios ni intros-->
+    <meta name="description" content="<?=$obj->newspaper->description?>" />
+    <!--Palabras claves del especial, necesario para buscadores. Separadas por comas.-->
+    <meta name="keywords" content="<?=$keywords?>" />
+    
+    <!--El autor/autores del especial, separados por comas-->
+    <meta name="author" content="<?=$authors?>" />
+
+    <!--Twitter Cards-->  
+    <meta name="twitter:card" content="summary_large_image">
+    <!--El nombre del diario-->
+    <meta name="twitter:site" content="<?=$obj->newspaper->name?>">
+    <!--El nombre de usuario en TW del diario-->
+    <meta name="twitter:creator" content="<?=$obj->newspaper->twitterSite?>">
+    <!--El título del especial para cuando se comparta en Twitter-->
+    <meta name="twitter:title" content="<?=$obj->newspaper->titleH1?>">
+    <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
+    <meta name="twitter:description" content="<?=$obj->newspaper->shortDescription?>">
+    <!--URL de la imagen con la que se va a compartir en TW el especial. Puede ser cualquiera del especial-->
+    <meta name="twitter:image:src" content="<?=$URLBASE?>/data/imagenes/portada.jpg">  
+    
+    <!--FB Share-->
+    <!--El título del especial  para cuando se comparta en Facebook-->
+    <meta property="og:title" content="<?=$obj->newspaper->titleH1?>" />
+    <meta property="og:type" content="article" />
+    <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
+    <meta property="og:description" content="<?=$obj->newspaper->shortDescription?>" />
+    <!--Palabras claves del especial. Separadas por comas.-->
+    <meta name="keywords" content="<?php 
+    foreach ($obj->newspaper->keywords as $v) {echo " $v ,";  }?>" />
+    <!--La URL del especial-->
+    <meta property="og:url" content="<?=$obj->newspaper->URL?>" />
+    <!--URL de la imagen con la que se va a compartir en FB el especial. Puede ser cualquiera del especial-->
+    <meta property="og:image" content="<?=$URLBASE?>/data/imagenes/portada.jpg" />
+

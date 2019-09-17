@@ -3,7 +3,7 @@
    <!--Botones sociales: cambiamos los valores del nombre de la carpeta del especial y el título del mismo-->
         <div class="boton">
           <a
-            href="http://www.facebook.com/share.php?u=https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php&title=##TITULO-H1##"
+            :href="facebook"
             target="blank"
             onclick="javascript:window.open(this.href,
       '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
@@ -13,7 +13,7 @@
         </div>
         <div class="boton">
           <a
-            href="https://twitter.com/share?url=https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php&text=##TITULO-H1##. Vía @usuario-twitter"
+            :href="twitter"
             target="blank"
             onclick="javascript:window.open(this.href,
       '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
@@ -23,9 +23,9 @@
         </div>
         <div class="boton paramovil">
           <a
-            href="whatsapp://send?text=##TITULO-H1##. https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php"
-            data-text="##TITULO-H1##"
-            data-href="https://##WEB-DOMINIO-DIARIO##/temas/##CARPETA-ESPECIAL##/index.php"
+            :href="whatsapp"
+            :data-text="newspaper.titleH1"
+            :data-href="newspaper.URL"
             class="wa_btn wa_btn_s"
           >
             <i class="fa fa-fw fa-whatsapp fa-2x"></i>
@@ -37,8 +37,29 @@
 
 <script>
 export default {
+  props: {
+    newspaper:{
+      type: Object,
+      required: true
+    }
+  },
+    computed: {
+      facebook() {
+        if(this.newspaper){
 
-}
+          const facebookURL = `http://www.facebook.com/share.php?u=${this.newspaper.URL}&title=${this.newspaper.titleH1}`
+        return facebookURL
+        }
+      },
+      twitter() {
+        const twitterURL = `https://twitter.com/share?url=${this.newspaper.URL}&text=${this.newspaper.titleH1}. Vía @${this.newspaper.twitterSite}`
+        return twitterURL
+      },
+      whatsapp(){
+        const whatsappCode = `whatsapp://send?text=${this.newspaper.titleH1}. ${this.newspaper.URL}`
+      }
+    },
+  }
 </script>
 
 <style>

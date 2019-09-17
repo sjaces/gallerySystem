@@ -1,3 +1,6 @@
+<?php 
+  if($PRODUCTION!= true) die;
+?>
  <!-- Google Tag Manager Body (noscript) -->
     <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
       DDC: GTM-K9ZKMV

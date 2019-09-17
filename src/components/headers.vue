@@ -21,7 +21,7 @@
   </nav>
 
   <!--Texto e imagen de apertura escritorio. La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
-  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo">
+  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo" >
       <div class="row align-items-end">
         <div class="col-md-10 col-center">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
@@ -40,7 +40,7 @@
 
       </div>
   </header>
-       <div class="pt-3 firmaFoto">
+       <div class="firmaFoto">
         <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
       </div>
 
@@ -57,7 +57,7 @@
             {{ newspaper.subtitle }}
           </p>
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
-          <img class="img-fluid" :src="cover.img_src" :alt="cover.alt" />
+          <img class="img-fluid firma" :src="portada" :alt="cover.alt" />
            <div class="firmaFoto">
             <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
           </div> 
@@ -71,16 +71,16 @@
       </div>
     </div>
   </div>
-   <img src="../../public/data/imagenes/pixel.png" alt="" @load="checkNewspaper()" />
+   <img src="../../public/data/manchetas/pixel.png" alt="" @load="checkNewspaper()" />
 </div>
 
 </template>
 
 <script>
 import cabeceras from '../assets/js/cabeceras.min'
-import { nsend } from 'q'
+import { setTimeout } from 'timers';
 // import VueRouter from 'vue-router'
-var myCabeceras = require('../assets/js/cabeceras.min.js')
+// var myCabeceras = require('../assets/js/cabeceras.min.js')
 // import cabeceras from "../assets/js/cabeceras.min.js"
 
 export default {
@@ -97,18 +97,30 @@ export default {
   computed: {
     logo() {
       if(this.newspaper){
-        return `./data/imagenes/manchetas/${this.newspaper.logos}/${this.newspaper.cabecera}.png`
+        return `./data/manchetas/${this.newspaper.logos}/${this.newspaper.cabecera}.png`
       }
       return ''
+    },
+     putBackground(){
+      let styles = ` background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background-position: top; background-attachment: scroll; background-size: cover; margin-top: 70px; min-height: 700px;  `
+    return styles
+    },
+    portada(){
+      return `./data/imagenes/${this.cover.img_src}`
     }
   },
   methods: {
         checkNewspaper () {
-            // console.log("Checking Newspaper")
-            // console.log("Checking Newspaper", myCabeceras)
-            // console.log("Checking Newspaper", this)
-            cabeceras()
-            // myCabeceras()
+          setTimeout(function (){
+            if(this.newspaper){
+  
+              console.log(this.newspaper.logos)
+              // console.log("Checking Newspaper", cabeceras)
+              console.log("Checking Newspaper", this.newspaper.logos)
+              cabeceras(this.newspaper.logos)
+            }
+
+          }, 3000)
         }
     }
 }

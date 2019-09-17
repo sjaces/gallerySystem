@@ -30,8 +30,8 @@
         var _sf_async_config = (window._sf_async_config =
           window._sf_async_config || {});
         _sf_async_config.sections = "Especiales";
-        _sf_async_config.authors = "autor1, autor2, autor3";
-        _sf_async_config.title = "##TITULO-H1##";
+        _sf_async_config.authors = "<?=$authors?>";
+        _sf_async_config.title = "<?=$obj->newspaper->titleH1?>";
         /** CONFIGURATION END **/
         function loadChartbeat() {
           var e = document.createElement("script");

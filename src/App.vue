@@ -2,7 +2,7 @@
   section
     #app
       Headers(:newspaper="newspaper" :cover="cover")
-      Authors(:athors="newspaper.authors")
+      Authors(:authors="newspaper.authors")
       List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
       Recomendations(:teInteresa="teInteresa")
       Footer

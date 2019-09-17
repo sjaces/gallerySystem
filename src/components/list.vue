@@ -1,6 +1,6 @@
 <template lang="pug"> 
-		transition-group(name="flip-list", tag="ul")
-			li(v-for='item in list', v-bind:key="item.title")
+		transition-group(name="flip-list", tag="div")
+			div(v-for='item in list', v-bind:key="item.title")
 				Item(:item='item' v-on:oneMore="setOneMore(item)" :votes="votes")
 				Banner(v-if="showBanner(item)" :number="(number(item)/ratioBanners)") 
 </template>
@@ -58,7 +58,7 @@ export default {
 .flip-list-move {
   transition: transform 1s;
 }
-	li {
+	/* li {
 		list-style: none
-	}
+	} */
 </style>

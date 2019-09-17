@@ -14,10 +14,23 @@
     "keywords": ["keyone", "keytwo", "keythree"],
     "twitterSite": "diariosevilla?????",
     "URL": "url?????",
-    "authors": [{
-      "name": "Ángel J Cachón de Elías?????",
-      "twitter": "sjaces?????"
-    }],
+    "authors": [
+      {
+      "name": "Ángel J Cachón de Elías",
+      "twitter": "sjaces?????",
+      "role" : "designer"
+      },
+      {
+        "name": "Puz Muz",
+        "twitter": "sjaces?????",
+        "role" : "designer"
+        },
+      {
+        "name": "Pepito perez?????",
+        "twitter": "pepinho?????",
+        "role" : "writer"
+      }
+  ],
     "ordered": false,
     "logos": "color",
     "backgroundColor": "#FFF",

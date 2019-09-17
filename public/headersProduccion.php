@@ -36,7 +36,7 @@
               'layout': 'galeria',
               'titular': '<?=$titleh1?>', //Título del especial, con guiones en vez de espacios
               'fechapublicacion': '<?=$obj->newspaper->fechapublicacion?>',  //Fecha de publicación, en el formato AÑOMESDIA
-              'keywords': '',
+              'keywords': '<?=$keywords?>',
               'noticia_id': '',
               'seotag': '',
               'platform': platform,
@@ -44,7 +44,7 @@
               'lastmodify': '',
               'title': '<?=$obj->newspaper->titleH1?>', //El título, con espacios
               'section': 'Especiales',
-              'author': 'Nombre del Autor del especial', //El autor del especial. Si hay varios, separados por coma
+              'author': '<?=$authors?>', //El autor del especial. Si hay varios, separados por coma
               'user': '',
               'firma': '',
               'mediatype': '',

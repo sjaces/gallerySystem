@@ -78,10 +78,6 @@
 
 <script>
 import cabeceras from '../assets/js/cabeceras.min'
-import { setTimeout } from 'timers';
-// import VueRouter from 'vue-router'
-// var myCabeceras = require('../assets/js/cabeceras.min.js')
-// import cabeceras from "../assets/js/cabeceras.min.js"
 
 export default {
   props: {
@@ -92,6 +88,8 @@ export default {
     cover:{
       type: Object,
       required: true
+    },
+    logos:{
     }
   },
   computed: {
@@ -109,20 +107,16 @@ export default {
       return `./data/imagenes/${this.cover.img_src}`
     }
   },
+  updated(){
+    this.checkNewspaper()
+  },
   methods: {
         checkNewspaper () {
-          setTimeout(function (){
-            if(this.newspaper){
-  
-              console.log(this.newspaper.logos)
-              // console.log("Checking Newspaper", cabeceras)
-              console.log("Checking Newspaper", this.newspaper.logos)
-              cabeceras(this.newspaper.logos)
-            }
-
-          }, 3000)
+            if(this.newspaper.logos){
+              cabeceras(this.logos)
         }
     }
+}
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     #app
-      Headers(:newspaper="newspaper" :cover="cover")
+      Headers(:newspaper="newspaper" :cover="cover" :logos="newspaper.logos")
       Authors(:authors="newspaper.authors")
       List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
       Recomendations(:teInteresa="teInteresa")
@@ -57,6 +57,7 @@ export default {
         this.teInteresa = json.teInteresa
         this.cover = json.cover
         this.redefiningColors()
+        // console.log(this.newspaper.logos)
       });
   },
   methods: {

@@ -12,7 +12,11 @@
       }
       ?>
       
-      
+    <script>
+    const referral = window.document.referrer
+    console.log("referral", referral)
+    if(referral) window.localStorage.setItem("referral", referral)
+    </script>
     <meta charset="utf-8">
     <title><?=$obj->newspaper->title?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -18,7 +18,7 @@ import Footer from './components/footer.vue'
 import ShareButtons from './components/shareButtons.vue'
 // import "bootstrap/dist/css/bootstrap.min.css"
 
-import $ from "jquery";
+// import $ from "jquery";
 import "./assets/css/estiloscomunes.css";
 import "./assets/css/personalizado.css";
 import "./assets/js/animate-in.js";
@@ -40,16 +40,22 @@ export default {
   computed: {
     orderedList() {
       if(this.newspaper.ordered){
-        console.log("Fotos ordenadas")
+        // console.log("Fotos ordenadas")
         return this.order(this.list)
       }else{
-        console.log("Fotos desordenadas")
+        // console.log("Fotos desordenadas")
         return this.list
       }
     }
   },
+  created() {
+    // var referral = window.document.referrer
+    // // console.log("referral", referral)
+    // window.localStorage.setItem("referral", referral)
+  },
   mounted() {
-    fetch("./data/data.json")
+    
+      fetch("./data/data.json")
       .then(res => res.json())
       .then(json => {
         this.list = json.list
@@ -92,18 +98,14 @@ export default {
         document.body.style.setProperty('--colorRedes', this.newspaper.sharer)
         document.body.style.setProperty('--colorSobre', this.newspaper.over)
         
-        console.log("newspaper", this.newspaper)
-        console.log("colores", this.newspaper.backgroundColor, this.newspaper.color, this.newspaper.mainColor)
+        // console.log("newspaper", this.newspaper)
+        // console.log("colores", this.newspaper.backgroundColor, this.newspaper.color, this.newspaper.mainColor)
     }
     
   }
-};
+}
 </script>
 
 <style>
-.LinkPublicacion:last-child {
-      /* width:15%; */
-      /* border-bottom: 1px solid yellow;
-      border-bottom-width: 15%; */
-  }
+
 </style>

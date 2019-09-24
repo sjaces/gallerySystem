@@ -1,5 +1,5 @@
 <!-- Begin comScore Tag -->
-      <!-- <script>
+      <script>
         var _comscore = _comscore || [];
         _comscore.push({ c1: "2", c2: "14621244" });
         (function() {
@@ -16,11 +16,11 @@
         <img
           src="https://sb.scorecardresearch.com/p?c1=2&c2=14621244&cv=2.0&cj=1"
         />
-      </noscript> -->
+      </noscript>
       <!-- End comScore Tag -->
   
       <!--DataLayer Analytics y AdServer-->
-      <!-- <script>
+      <script>
          //Calculamos el campo platform viendo si estamos visitando desde escritorio o móvil:
          var platform = 'Desktop';
          if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))
@@ -54,7 +54,7 @@
               'su': '',
               'kid': ''
           });
-      </script> -->
+      </script>
       <!--Fin DataLayer Analytics y AdServer-->
   
       <!-- Google Tag Manager Header-->
@@ -69,7 +69,7 @@
         HI: GTM-M3F442
         MH: GTM-W2RC7Q
       -->
-      <!-- <script>
+      <script>
         (function(w, d, s, l, i) {
           w[l] = w[l] || [];
           w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -80,12 +80,12 @@
           j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
           f.parentNode.insertBefore(j, f);
         })(window, document, "script", "dataLayer", "<?=$obj->newspaper->googleCode?>");
-      </script> -->
+      </script>
       <!-- End Google Tag Manager -->
 
       <!--Chartbeat head-->
       <!--La variable _sf_async_config.domain. Sustituir por la url del diario, sin www-->
-      <!-- <script type="text/javascript">
+      <script type="text/javascript">
         var _sf_async_config = _sf_async_config || {};
         /** CONFIGURATION START **/
         _sf_async_config.uid = 65808;
@@ -95,7 +95,7 @@
         _sf_async_config.useCanonicalDomain = true;
         /** CONFIGURATION END **/
       </script>
-      <script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script> -->
+      <script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
       <!--End Chartbeat head-->
 
       

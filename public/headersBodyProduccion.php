@@ -1,6 +1,3 @@
-<?php 
-  if($PRODUCTION!= true) die;
-?>
  <!-- Google Tag Manager Body (noscript) -->
     <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
       DDC: GTM-K9ZKMV
@@ -14,20 +11,20 @@
       MH: GTM-W2RC7Q
     -->
 
-    <!-- <noscript>
+    <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=<?=$obj->newspaper->googleCode?>"
         height="0"
         width="0"
         style="display:none;visibility:hidden">
       </iframe>
-    </noscript> -->
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!--Chartbeat Body-->
     <!--La variable _sf_async_config.authors. Sustituir por los Autores, separados por coma-->
     <!--La variable _sf_async_config.title. El título del especial, como aparecerá en Chartbeat-->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       (function() {
         /** CONFIGURATION START **/
         var _sf_async_config = (window._sf_async_config =
@@ -46,5 +43,5 @@
         }
         loadChartbeat();
       })();
-    </script> -->
+    </script>
     <!--End Chartbeat Body-->

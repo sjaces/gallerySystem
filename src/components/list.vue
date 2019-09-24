@@ -30,22 +30,16 @@ export default {
 					return 5
 				}else{return 3}
 			}
-			// position(e){
-			// 	return this.list.indexOf(e)
-			// }
+			
 		},
 		methods: {
 			setOneMore(item){
 				this.$emit('oneMore', item.title)
-				// console.log("lista +1 ", item.title)
 			},
 			showBanner(item){
-				// console.log(this.number(item))
 				if(this.number(item) % this.ratioBanners) {
-					//  console.log(false)
 				return false
 				}else{ 
-				// console.log(true)
 				return true }
 			},
 			number(item){
@@ -58,8 +52,7 @@ export default {
 <style scoped>
 .flip-list-move {
   transition: transform 1s;
+  /* transition-delay: 1s; */
 }
-	/* li {
-		list-style: none
-	} */
+
 </style>

@@ -41,7 +41,7 @@
       </div>
   </header>
        <div class="firmaFoto">
-        <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
+        <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}&nbsp;&nbsp;
       </div>
 
   <div class="postit paramovil">

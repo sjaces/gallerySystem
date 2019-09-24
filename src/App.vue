@@ -62,7 +62,7 @@ export default {
         }
         return 0;
       });
-      console.log("ordenados", orderedList)
+      // console.log("ordenados", orderedList)
       return orderedList;
     },
     oneMore(item) {
@@ -75,7 +75,7 @@ export default {
       
       this.list[myItem].votes += 1;
       
-      fetch(this.newspaper.db_server + "api.php/records/mejorfoto/"+this.list[myItem].votesId, {
+      fetch(this.newspaper.db_server + "db.php", {
           method: 'PUT',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -101,16 +101,34 @@ export default {
     lookingForVotes () {
 
       //Builds the API URL
-      let api = this.newspaper.db_server + "api.php/records/mejorfoto/?filter=folder,eq," + this.newspaper.folder;
+      let api = this.newspaper.db_server + "db.php?folder=" + this.newspaper.folder;
 
-      // let api = this.newspaper.db_server + "api.php/records/" + "posts" + "/";
+      // let api = this.newspaper.db_server + "api2.php/records/" + "posts" + "/";
       console.log("looking for votes in ", api)
       fetch(api)
       .then(res => res.json())
       .then(json => {
-        console.log("votes", json.records )
-        if(json.records.length){
-          this.votes = json.records;
+        console.log("votes", json.length )
+        if(!json){
+          console.log("voy a meter 0 votos a todos por error 9999 ")
+                  this.list.map(item => {
+                      item.votes = 0
+                      // fetch(this.newspaper.db_server + "api2.php/records/mejorfoto", {
+                      fetch(this.newspaper.db_server + "db.php", {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        body: JSON.stringify({
+                          folder: this.newspaper.folder,
+                          item: item.img_file,
+                          votes: 0
+                        })
+                      })
+                      .then(res => res.text()) // OR res.json()
+                      .then(res => console.log(res))
+                    })
+          }
+        if(json.length){
+          this.votes = json;
           this.list.map(el => {
             let votesItem = this.votes.find(o => o.item === el.img_file)
             el.votes = votesItem.votes
@@ -118,12 +136,12 @@ export default {
             console.log("Votos de ", el.img_file, votesItem.votes)
             })
         }else{
-              console.log("voy a meter 0 votos a todos ")
+              console.log("voy a meter 0 votos a todos pq no están en base de datos")
                   this.list.map(item => {
                       item.votes = 0
-                      fetch(this.newspaper.db_server + "api.php/records/mejorfoto", {
+                      fetch(this.newspaper.db_server + "db.php", {
                         method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
+                       
                         body: JSON.stringify({
                           folder: this.newspaper.folder,
                           item: item.img_file,

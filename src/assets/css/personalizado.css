@@ -91,6 +91,10 @@ p {
     color: var(--color);
 }
 
+.lead strong {
+    color: var(--colorDestacado)
+}
+
 .magenarriba {
     margin-top: 50px!important
 }

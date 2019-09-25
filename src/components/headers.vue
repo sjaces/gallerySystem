@@ -21,20 +21,17 @@
   </nav>
 
   <!--Texto e imagen de apertura escritorio. La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
-  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo" >
+  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo" :style="putBackground" >
       <div class="row align-items-end">
         <div class="col-md-10 col-center">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
-          <h1 class="ibm colorBlanco">
-            {{ newspaper.titleH1 }}
+          <h1 class="ibm colorBlanco" v-html="newspaper.titleH1">
           </h1>
           <!--La entradilla del especial -->
-          <p class="subtitulo">
-            {{ newspaper.subtitle }}
+          <p class="subtitulo colorBlanco" v-html="newspaper.subtitle">
           </p>
           <!--El texto de presentación del especial -->
-          <p class="colorBlanco">
-            {{newspaper.description}}
+          <p class="colorBlanco" v-html="newspaper.description">
           </p>
         </div>
 
@@ -100,11 +97,12 @@ export default {
       return ''
     },
      putBackground(){
-      let styles = ` background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_src}') no-repeat; background-position: top; background-attachment: scroll; background-size: cover; margin-top: 70px; min-height: 700px;  `
+      let styles = ` background-size: cover; background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background-position: top; background-attachment: scroll; margin-top: 70px; min-height: 700px; min-width: 100%;   `
     return styles
     },
     portada(){
-      return `./data/imagenes/${this.cover.img_src}`
+      console.log("portada", this.cover.img_file)
+      return `./data/imagenes/${this.cover.img_file}`
     }
   },
   updated(){

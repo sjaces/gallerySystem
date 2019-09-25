@@ -1,7 +1,7 @@
 <template lang="pug"> 
 		transition-group(name="flip-list", tag="div")
 			div(v-for='item in list', v-bind:key="number(item)")
-				Item(:item='item' v-on:oneMore="setOneMore(item)" :votes="votes" :number="number(item)")
+				Item(:item='item' v-on:oneMore="setOneMore(item)" :voted="voted" :number="number(item)")
 				Banner(v-if="showBanner(item)" :number="(number(item)/ratioBanners)") 
 </template>
 
@@ -14,7 +14,7 @@ export default {
             type: Array,
             required: true
         },
-		votes:{
+		voted:{
 			type: Boolean
 		}
 		},

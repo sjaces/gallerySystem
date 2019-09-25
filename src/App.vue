@@ -3,7 +3,7 @@
     #app
       Headers(:newspaper="newspaper" :cover="cover" :logos="newspaper.logos")
       Authors(:authors="newspaper.authors")
-      List(:list="orderedList" v-on:oneMore="oneMore" :votes="newspaper.ordered")
+      List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted")
       Recomendations(:teInteresa="teInteresa")
       Footer
       ShareButtons(:newspaper="newspaper")
@@ -33,7 +33,8 @@ export default {
       list: [],
       teInteresa: [],
       cover: {},
-      votes: []
+      votes: [],
+      voted: false
     };
   },
   computed: {
@@ -50,7 +51,6 @@ export default {
     //Here I make things before mounting the app component
   },
   mounted() {
-
       //Load data from the data file and configuration
       fetch("./data/data.json") // <-- data file in json format
       .then(res => res.json())
@@ -58,6 +58,7 @@ export default {
         //pullate the data objects of the application
         //Data related to the publication
         this.newspaper = json.newspaper
+        if( !this.newspaper.ordered || window.localStorage.getItem('voted') ){ this.voted = true};
 
         //Data related to de items of the publication
         this.list = json.list
@@ -91,6 +92,9 @@ export default {
     },
     oneMore(item) {   // This method add 1 vote to the item desired and send the new value to the DB
 
+      //Before starting the voting process I see if this user has just voted before
+      if(this.voted) return
+
       // First I need to locate my item in the internal list
       let myItem = this.list.findIndex(function(el) {
         return item === el.title;
@@ -100,7 +104,7 @@ export default {
       // Build the URL to make the query to de DB
       let urlAPI = this.newspaper.db_server + "db.php?id="+this.list[myItem].votesId;
 
-        console.log("item ", item, this.list[myItem].votesId)
+        console.log("item tiene votos:  ", this.list[myItem].votesId)
 
       // I send the AJAX request to see the actual number the votes
       fetch(urlAPI, {
@@ -108,7 +112,7 @@ export default {
         })
         .then(res => res.json())
         .then(res => {
-          console.log("res", res[0].votes)
+          console.log("respuest dice que tiene votos: ", res[0].votes)
           
           //Then I add a vote to the real number of votes
           this.list[myItem].votes = parseInt(res[0].votes) + 1;
@@ -116,13 +120,15 @@ export default {
 
           // Then I send the AJAX request to add the vote
           fetch(urlAPI, {
-              method: 'PUT',
+              method: 'POST',
               body: JSON.stringify({
                 votes: parseInt(this.list[myItem].votes)
               })
             })
             .then(res => res.text())
             .then(res => {console.log(res)
+            window.localStorage.setItem("voted", true)
+            this.voted = true
             this.lookingForVotes()
             })
                         
@@ -159,14 +165,14 @@ export default {
       fetch(api)
       .then(res => res.json())
       .then(json => {
-        console.log("votes", json.length )
+        // console.log("votes", json.length )
         if(json.length){
           this.votes = json;
           this.list.map(el => {
             let votesItem = this.votes.find(o => o.item === el.img_file)
             el.votes = votesItem.votes
             el.votesId = votesItem.id
-            console.log("Votos de ", el.img_file, votesItem.votes)
+            // console.log("Votos de ", el.img_file, votesItem.votes)
             })
         }else{
               console.log("voy a meter 0 votos a todos pq no están en base de datos")

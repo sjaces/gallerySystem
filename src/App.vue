@@ -66,24 +66,26 @@ export default {
       return orderedList;
     },
     oneMore(item) {
-      
       let myItem = this.list.findIndex(function(el) {
-      
+        
         return item === el.title;
       });
 
+        console.log("item ", item, myItem)
       
-      this.list[myItem].votes += 1;
-      
-      fetch(this.newspaper.db_server + "db.php", {
+      this.list[myItem].votes = parseInt(this.list[myItem].votes) + 1;
+      console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
+      let urlAPI = this.newspaper.db_server + "db.php?id="+this.list[myItem].votesId;
+      fetch(urlAPI, {
           method: 'PUT',
-          headers: {'Content-Type': 'application/json'},
+          
           body: JSON.stringify({
-            folder: this.newspaper.folder,
-            item: this.list[myItem].img_file,
-            votes: this.list[myItem].votes
+            votes: parseInt(this.list[myItem].votes)
           })
         })
+        .then(res => res.text()) // OR res.json()
+                      .then(res => console.log(res))
+                    
        
     },
     
@@ -109,24 +111,24 @@ export default {
       .then(res => res.json())
       .then(json => {
         console.log("votes", json.length )
-        if(!json){
-          console.log("voy a meter 0 votos a todos por error 9999 ")
-                  this.list.map(item => {
-                      item.votes = 0
-                      // fetch(this.newspaper.db_server + "api2.php/records/mejorfoto", {
-                      fetch(this.newspaper.db_server + "db.php", {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        body: JSON.stringify({
-                          folder: this.newspaper.folder,
-                          item: item.img_file,
-                          votes: 0
-                        })
-                      })
-                      .then(res => res.text()) // OR res.json()
-                      .then(res => console.log(res))
-                    })
-          }
+        // if(!json){
+        //   console.log("voy a meter 0 votos a todos por error 9999 ")
+        //           this.list.map(item => {
+        //               item.votes = 0
+        //               // fetch(this.newspaper.db_server + "api2.php/records/mejorfoto", {
+        //               fetch(this.newspaper.db_server + "db.php", {
+        //                 method: 'POST',
+        //                 headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+        //                 body: JSON.stringify({
+        //                   folder: this.newspaper.folder,
+        //                   item: item.img_file,
+        //                   votes: 0
+        //                 })
+        //               })
+        //               .then(res => res.text()) // OR res.json()
+        //               .then(res => console.log(res))
+        //             })
+        //   }
         if(json.length){
           this.votes = json;
           this.list.map(el => {
@@ -137,6 +139,7 @@ export default {
             })
         }else{
               console.log("voy a meter 0 votos a todos pq no están en base de datos")
+              let items = this.list.length
                   this.list.map(item => {
                       item.votes = 0
                       fetch(this.newspaper.db_server + "db.php", {
@@ -149,7 +152,13 @@ export default {
                         })
                       })
                       .then(res => res.text()) // OR res.json()
-                      .then(res => console.log(res))
+                      .then(res => {
+                        console.log(res)
+                        items--
+                        if(items===0){
+                          this.lookingForVotes()
+                        }
+                        })
                     })
           }
       }

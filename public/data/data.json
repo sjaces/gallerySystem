@@ -16,20 +16,21 @@
     "twitterSite": "@granadahoy",
     "URL": "https://www.granadahoy.com/temas/15-lugares-visitar-Granada-imprescindibles/index.php",
     "authors": [
+      
       {
         "name": "Ángel J Cachón de Elías",
-        "twitter": "@sjaces",
-        "role" : "designer"
+        "link": "https://twitter.com/sjaces",
+        "role" : "Diseño y Programación"
       },
       {
         "name": "José Antonio Sánchez",
-        "twitter": "",
-        "role" : "designer"
+        "link": "",
+        "role" : "Diseño y Programación"
       },
       {
         "name": "Belén Rico",
-        "twitter": "",
-        "role" : "writer"
+        "link": "",
+        "role" : "redacción"
       }
     ],
     "ordered": true,
@@ -73,7 +74,7 @@
     {
       "title": "Los Cahorros, senderimos por el Río <strong>Monachil</strong>",
       "img_file": "4-Los-Cahorros-2.jpg",
-      "photographer": "ssssss",
+      "photographer": "",
       "text": "En el Parque Natural de Sierra Nevada, el valle en V del río Monachil traza una de las rutas más atractivas y populares de la provincia de Granada para senderistas y escaladores. A los Cahorros se puede acceder por el  mismo pueblo de Monachil. La ruta desciende hasta el río y permite disfrutar de los espectaculares tajos verticales, los angostos pasos de piedra y la riqueza ecológica del entorno. Continúa por el desfiladero, en la margen izquierda del río. Lo angosto de la vía obliga a agacharse o a transitar a gatas por algunos tramos. El largo puente colgante de Los Cahorros, de 63 metros y más de un siglo de antigüedad, fue reformado hace unos años en un proceso en el que perdió en balanceo pero ganó en seguridad. Además, no es el único puente que se atraviesa en el recorrido, marcado por el vegetación de ribera y con unas espectaculares vistas de los pueblos limítrofes.",
       "votes": 0
     },

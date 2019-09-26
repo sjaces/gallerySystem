@@ -2,14 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center firma">
+        <template v-for="item in roles">
         <p class="authors">
-          <strong>DISEÑO Y PROGRAMACIÓN: </strong> 
-          <span v-for="item in designers" class="coma" :key="item.name"> {{ item.name }}</span>
+          <strong>{{item}}: </strong>
+          <span v-for="author in authorsOfRole(item)" class="coma" :key="author.name"> <a v-if="author.link" :href="author.link" target="_blank">{{ author.name }}</a> <template v-if="!author.link">{{author.name}}</template></span>
         </p>
-        <p class="authors">
-          <strong>REDACCIÓN: </strong>
-          <span v-for="item in writers" class="coma" :key="item.name"> {{ item.name }}</span>
-        </p>
+        </template>
       </div>
     </div>
   </div>
@@ -19,33 +17,54 @@
 export default {
   props: {
     authors: {
-      
       required: true
     }
   },
   computed:{
-    designers() {
+    roles() {
+      let diferentRoles = []
       if(this.authors){
-        let designers = this.authors.filter(item => item.role === 'designer')
-        return designers
-      }else{return ''}
-    },
-    writers() {
-      if(this.authors){
-        let writers = this.authors.filter(item => item.role === 'writer')
-      return writers
-      }else{return ''}
+        this.authors.forEach(element => {
+          diferentRoles.push(element.role)
+        });
+      }
+      return [... new Set(diferentRoles)]
     }
+  },
+  methods: {
+     authorsOfRole(role){
+      if(this.authors){
+        return this.authors.filter(e => e.role===role)
+      }
+     }
   }
 };
 </script>
 
 <style>
-.coma::after {
-  content: ', ';
-}
+
+ /* .coma:first-child::before {
+  content: 's ';
+} */
+
+/* .coma:last-child::before {
+  content: 'y ';
+} */
+
 
 .coma:last-child::after {
   content: '.';
 }
+
+.coma::before {
+  content: '';
+}
+.coma::after {
+  content: ', ';
+}
+
+.authors strong {
+  text-transform: uppercase
+}
+
 </style>

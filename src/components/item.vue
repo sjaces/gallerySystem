@@ -27,91 +27,92 @@
 
 <script>
 export default {
-    props: {
-        item: {
-            type: Object,
-            required: true
-        },
-		voted: {
-			type: Boolean
-		},
-		number:{
-			type: Number,
-			required: true
-		}
-	},
-	computed: {
-		img_file () {
-			return "./data/imagenes/"+this.item.img_file;
-		},
-		votesVisible() {
-			if(this.item.votes) return true
-		}
-	},
-	methods: {
-		fixFirma () {
-			if(this.item.photographer){
-
-			const myImage = document.getElementsByClassName('firma')[this.number+1]
-			const width = myImage.width
-			myImage.nextSibling.setAttribute("style", "width:" + width + "px ;display: inline-block; position: relative; margin-top: -20px;")
-			myImage.previousSibling.setAttribute("style", "width:"+width+"px;")
-				}
-
-		},
-		oneMore () {
-			this.$emit('oneMore', this.item.title)
-		}
-	}
-}
+  props: {
+    item: {
+      type: Object,
+      required: true
+    },
+    voted: {
+      type: Boolean
+    },
+    number: {
+      type: Number,
+      required: true
+    }
+  },
+  computed: {
+    img_file() {
+      return "./data/imagenes/" + this.item.img_file;
+    },
+    votesVisible() {
+      if (this.item.votes) return true;
+    }
+  },
+  methods: {
+    fixFirma() {
+      const myImage = document.getElementsByClassName("firma")[this.number + 1];
+      const width = myImage.width;
+      if (this.item.photographer) {
+        myImage.nextSibling.setAttribute("style", "width:" + width + "px ;display: inline-block; position: relative; margin-top: -20px;");
+      }
+      if (this.votesVisible) {
+        myImage.previousSibling.setAttribute("style", "width:" + width + "px;");
+      }
+    },
+    oneMore() {
+      this.$emit("oneMore", this.item.title);
+    }
+  }
+};
 </script>
 
 <style lang="scss" >
-	.imageGroup{
-		position: relative;
-		& img{
-			margin-top: 0;
-		}
-	}
+.imageGroup {
+  position: relative;
+  & img {
+    margin-top: 0;
+  }
+}
 
-	.voteBar {
-		/* width: 50%; */
-		margin: 0 auto;
-		background: var(--colorDestacado);
-		/* border-radius: 15px 15px 0 0; */
-		padding: .2em 0;
-		font-size: 0.8em;
-		& p {
-			color: var(--fondo);
-			margin: 0;
-			font-weight: 900;
-			& button {
-				background: var(--fondo);
-				margin: 0 1em;
-			}
-		}
-	}
-
-	.voteSticker {
-		position: absolute;
-    justify-content: center;
-    flex-direction: column;
-    bottom: 2em;
-    right: 1em;
-    display: flex;
-    width: 7em;
-    height: 7em;
-    border-radius: 52%;
-    padding: 0.5em 1.5em;
-    background-color: var(--colorDestacado);
+.voteBar {
+  /* width: 50%; */
+  margin: 0 auto;
+  background: var(--colorDestacado);
+  /* border-radius: 15px 15px 0 0; */
+  padding: 0.2em 0;
+  font-size: 0.8em;
+  & p {
     color: var(--fondo);
-		& p{
-			display: inline-block;
-			font-weight: 800;
-		color: var(--fondo);}
+    margin: 0;
+    font-weight: 900;
+    & button {
+      background: var(--fondo);
+      margin: 0 1em;
+    }
+  }
+}
 
-		& button {
-		    border-radius: 50%;
+.voteSticker {
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 2em;
+  right: 1em;
+  display: flex;
+  width: 7em;
+  height: 7em;
+  border-radius: 52%;
+  padding: 0.5em 1.5em;
+  background-color: var(--colorDestacado);
+  color: var(--fondo);
+  & p {
+    display: inline-block;
+    font-weight: 800;
+    color: var(--fondo);
+  }
+
+  & button {
+    border-radius: 50%;
     width: 3em;
     text-align: center;
     height: 3em;
@@ -119,8 +120,6 @@ export default {
     margin: 0 auto;
     padding: 0;
     font-weight: 700;
-		}
-
-		
-	}
+  }
+}
 </style>

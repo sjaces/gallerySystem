@@ -4,17 +4,24 @@
 			.row
 				.col-md-12
 					.item.hidden(v-html="item.title")
-					img.img-fluid.d-block.mx-auto.firma(v-bind:src="img_file" :alt="item.title" @load="fixFirma()")
-					.firmaFoto(v-if="item.photographer")
-						span.fa.fa-camera-retro.fa-lg &nbsp; {{ item.photographer }}
-					br(v-if="!item.photographer")
+					div.imageGroup
+						.voteBar(v-if="votesVisible")
+							p Votos: {{ item.votes }}
+								template(v-if="!voted")
+									button.btn(@click="oneMore") +1
+						img.img-fluid.d-block.mx-auto.firma(v-bind:src="img_file" :alt="item.title" @load="fixFirma()")
+						.firmaFoto(v-if="item.photographer")
+							span.fa.fa-camera-retro.fa-lg &nbsp; {{ item.photographer }}
+						br(v-if="!item.photographer")
+						//- .voteSticker(v-if="votesVisible")
+						//- 	p Votos: {{ item.votes }}
+						//- 	template(v-if="!voted")
+						//- 		button.btn(@click="oneMore") +1
 					h2.lead
 						span.colorDestacado {{ number }}. 
 						span(v-html="item.title") 
 					p.text-left(:id="item.title", v-html="item.text") 
-					p(v-if="votesVisible") Votos: {{ item.votes }}
-					template(v-if="!voted")
-						button.brn.btn-primary(@click="oneMore") +1
+					
     
 </template>
 
@@ -47,7 +54,8 @@ export default {
 
 			const myImage = document.getElementsByClassName('firma')[this.number+1]
 			const width = myImage.width
-			myImage.nextSibling.setAttribute("style", "width:" + width + "px ;display: inline-block; position: relative; margin-top: -20px;")//
+			myImage.nextSibling.setAttribute("style", "width:" + width + "px ;display: inline-block; position: relative; margin-top: -20px;")
+			myImage.previousSibling.setAttribute("style", "width:"+width+"px;")
 				}
 
 		},
@@ -57,3 +65,62 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss" >
+	.imageGroup{
+		position: relative;
+		& img{
+			margin-top: 0;
+		}
+	}
+
+	.voteBar {
+		/* width: 50%; */
+		margin: 0 auto;
+		background: var(--colorDestacado);
+		/* border-radius: 15px 15px 0 0; */
+		padding: .2em 0;
+		font-size: 0.8em;
+		& p {
+			color: var(--fondo);
+			margin: 0;
+			font-weight: 900;
+			& button {
+				background: var(--fondo);
+				margin: 0 1em;
+			}
+		}
+	}
+
+	.voteSticker {
+		position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 2em;
+    right: 1em;
+    display: flex;
+    width: 7em;
+    height: 7em;
+    border-radius: 52%;
+    padding: 0.5em 1.5em;
+    background-color: var(--colorDestacado);
+    color: var(--fondo);
+		& p{
+			display: inline-block;
+			font-weight: 800;
+		color: var(--fondo);}
+
+		& button {
+		    border-radius: 50%;
+    width: 3em;
+    text-align: center;
+    height: 3em;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    font-weight: 700;
+		}
+
+		
+	}
+</style>

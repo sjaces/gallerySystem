@@ -127,8 +127,8 @@ export default {
             })
             .then(res => res.text())
             .then(res => {console.log(res)
-            window.localStorage.setItem("voted", true)
             this.voted = true
+            window.localStorage.setItem("voted", true)
             this.lookingForVotes()
             })
                         

@@ -11,7 +11,8 @@
 									button.btn(@click="oneMore") +1
 						img.img-fluid.d-block.mx-auto.firma(v-bind:src="img_file" :alt="item.title" @load="fixFirma()")
 						.firmaFoto(v-if="item.photographer")
-							span.fa.fa-camera-retro.fa-lg &nbsp; {{ item.photographer }}
+							span.fa.fa-camera-retro.fa-lg 
+							span.space {{ item.photographer }}
 						br(v-if="!item.photographer")
 						//- .voteSticker(v-if="votesVisible")
 						//- 	p Votos: {{ item.votes }}
@@ -121,5 +122,9 @@ export default {
     padding: 0;
     font-weight: 700;
   }
+}
+
+.space::before {
+  content: ' ';
 }
 </style>

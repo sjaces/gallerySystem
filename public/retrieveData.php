@@ -2,12 +2,18 @@
       $json = file_get_contents("./data/data.json");
       $obj = json_decode($json);
       $texto = $obj->newspaper->titleH1;
+      $title = $obj->newspaper->title;
       $PRODUCTION = $obj->newspaper->production;
       $titleh1 = str_replace(" ", "-", $texto);
-      echo "<!-- $titleh1 -->";
+      $URL= $obj->newspaper->URL;
+      echo "<!-- $title -->";
       echo "<!-- $PRODUCTION -->";
+      echo "<!-- URL $URL  -->";
+      $pos = strpos($URL, "index.php")-1;
+      $URLBASE = (str_split($URL, $pos));
+      $URLBASE = $URLBASE[0];
+      echo "<!-- URLBASE $URLBASE  -->";
 
-      $URLBASE = str_split($obj->newspaper->URL, strpos($obj->newspaper->URL, "index.php")-1)[0];
 
       $keywords = "";
       foreach ($obj->newspaper->keywords as $v) { $keywords .= " $v ,";  }

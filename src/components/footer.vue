@@ -1,4 +1,4 @@
-<template>
+<template charset="utf-8">
   <div class="py-5">
         <div class="container">
           <div class="row">

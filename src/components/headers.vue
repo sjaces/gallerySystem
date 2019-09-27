@@ -37,8 +37,8 @@
 
       </div>
   </header>
-       <div class="firmaFoto">
-        <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}&nbsp;&nbsp;
+       <div class="firmaFoto firmaPortada">
+        <span class="fa fa-camera-retro fa-lg "> </span> {{cover.photographer}} 
       </div>
 
   <div class="postit paramovil">
@@ -56,7 +56,7 @@
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
           <img class="img-fluid firma" :src="portada" :alt="cover.alt" />
            <div class="firmaFoto">
-            <span class="fa fa-camera-retro fa-lg"> </span> {{cover.photographer}}
+            <span class="fa fa-camera-retro fa-lg"> </span>| {{cover.photographer}}
           </div> 
           <!--El texto de presentación del especial -->
           <p>
@@ -119,5 +119,7 @@ export default {
 </script>
 
 <style>
-
+.firmaPortada {
+  padding-right: 10px;
+}
 </style>

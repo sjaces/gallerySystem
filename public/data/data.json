@@ -16,7 +16,6 @@
     "twitterSite": "@granadahoy",
     "URL": "https://www.granadahoy.com/temas/15-lugares-visitar-Granada-imprescindibles/index.php",
     "authors": [
-      
       {
         "name": "Ángel J Cachón de Elías",
         "link": "https://twitter.com/sjaces",
@@ -33,7 +32,7 @@
         "role" : "redacción"
       }
     ],
-    "ordered": true,
+    "ordered": false,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/",
     "folder": "15-lugares-visitar-Granada-imprescindibles",
     "logos": "color",
@@ -46,7 +45,7 @@
   },
   "cover":{
     "img_file": "portada.jpg",
-    "alt": "Geoparque",
+    "alt": "Geoparque ",
     "photographer": "Anibal Trejo"
   },
   "list": [
@@ -54,14 +53,14 @@
       "title": "Senderismo por el Río <strong>Castril</strong>",
       "img_file": "1.-Castril.jpg",
       "photographer": "Sole Miranda",
-      "text": "En el Altiplano, este <b>paseo</b> corto y fácil pero de excepcional belleza lo tiene todo para disfrutar en familia. Situado en el Parque Natural de la Sierra de Castril, discurre por un ecosistema fluvial y urbano por lo que es recomendable para cualquier época del año, incluso en los meses de calor. La ruta desciende al río y llega hasta la antigua central eléctrica, excavada en la roca de una de las laderas del cauce.  El sendero se extiende por una espectacular pasarela de madera construida con antiguas traviesas de ferrocarril que sobrevuela el río, un puente colgante y una galería de casi setenta metros de longitud a través de la que se puede acceder a un balcón natural que se asoma a un impactante salto de agua. Está permitido tanto el baño y como la pesca de trucha y un antiguo molino convertido en restaurante sirve para recuperar fuerzas.",
+      "text": "En el Altiplano, este paseo corto y fácil pero de excepcional belleza lo tiene todo para disfrutar en familia. Situado en el Parque Natural de la Sierra de Castril, discurre por un ecosistema fluvial y urbano por lo que es recomendable para cualquier época del año, incluso en los meses de calor. La ruta desciende al río y llega hasta la antigua central eléctrica, excavada en la roca de una de las laderas del cauce.  El sendero se extiende por una espectacular pasarela de madera construida con antiguas traviesas de ferrocarril que sobrevuela el río, un puente colgante y una galería de casi setenta metros de longitud a través de la que se puede acceder a un balcón natural que se asoma a un impactante salto de agua. Está permitido tanto el baño como la pesca de trucha y un antiguo molino convertido en restaurante sirve para recuperar fuerzas.",
       "votes": 0
     },
     {
       "title": "El Acuario de <strong>Almuñécar</strong>",
       "img_file": "2.-Acuario-Almunecar.jpg",
       "photographer": "",
-      "text": "Otro plan ideal para turismo en familia es la visita al Acuario de Almuñécar, que cuenta con 20 tanques o peceras que albergan aproximadamente 3.500 ejemplares pertenecientes a unas 200 especies. Además en sus numerosas actividades divulgativas -que van de la suelta de ejemplares a jornadas especiales de flora y fauna local-, los visitantes pueden ir descubriendo los secretos del mar a través de dos perspectivas: la evolución de los organismos acuáticos desde la creación de los océanos y un recorrido por los ecosistemas y especies propios de estas costas.",
+      "text": "Otro plan ideal para turismo en familia es la visita al Acuario de Almuñécar, que cuenta con 20 tanques o peceras que albergan aproximadamente 3.500 ejemplares pertenecientes a unas 200 especies. Además de sus numerosas actividades divulgativas -que van de la suelta de ejemplares a jornadas especiales de flora y fauna local-, los visitantes pueden ir descubriendo los secretos del mar a través de dos perspectivas: la evolución de los organismos acuáticos desde la creación de los océanos y un recorrido por los ecosistemas y especies propios de estas costas.",
       "votes": 0
     },
     {
@@ -90,11 +89,11 @@
       "title": "Cueva de las Ventanas de <strong>Píñar</strong>",
       "img_file": "6-cuenva-ventanas-pinar.jpg",
       "photographer": "",
-      "text": "El término municipal de Píñar contiene la única gruta de Granada abierta al público. De los 1.200 metros de los que consta, ofrece medio kilómetro de bello recorrido de 500 metros, de los 1.200 que consta. Un sistema de iluminación artísticas con 300 puntos de luz ensalza  sus salas cuajadas de estalactitas, estalagmitas y salpicadas por pequeños lagos. La magia mística del entorno se interrumpe a veces por las recreaciones de antiguos hábitat de la cueva, entre ellos un cubil de hienas o un enterramiento neolítico. Además, la visita a este monumento natural ofrece el aliciente de conocer las estribaciones de Sierra Arana y pasear en el tren turístico que sube a los visitantes desde Píñar hasta la entrada de la cueva.",
+      "text": "El término municipal de Píñar contiene la única gruta de Granada abierta al público. De los 1.200 metros de los que consta, ofrece medio kilómetro de bello recorrido. Un sistema de iluminación artísticas con 300 puntos de luz ensalza  sus salas cuajadas de estalactitas, estalagmitas y salpicadas por pequeños lagos. La magia mística del entorno se interrumpe a veces por las recreaciones de antiguos hábitat de la cueva, entre ellos un cubil de hienas o un enterramiento neolítico. Además, la visita a este monumento natural ofrece el aliciente de conocer las estribaciones de Sierra Arana y pasear en el tren turístico que sube a los visitantes desde Píñar hasta la entrada de la cueva.",
       "votes": 0
     },
     {
-      "title": "Dormir en Casa-Cueva en <strong>Guadix y Baza</strong>",
+      "title": "Dormir en casa-cueva de <strong>Guadix y Baza</strong>",
       "img_file": "7.-Casa-Cueva-Al-Jatib.jpg",
       "photographer": "",
       "text": "Una de las experiencias más sigulares para los que quieran hacer turismo sin pisar Granada es sin duda dormir en una casa-cueva. Existe una oferta muy amplia de este tipo de hospedajes que se engloban bajo la marca Andalusian Cave Hotels. Estos establecimientos, aunque permiten la recuperación y conservación de esta tradición arquitectónica, son alojamientos con encanto completamente adaptados a las comodidades y usos del siglo XXI. Resultan perfectas para desconectar, fundirse con el paisaje o una escapada romántica. ",
@@ -111,14 +110,14 @@
       "title": "Geoparque de <strong>Gorafe</strong>",
       "img_file": "9.-Geoparque.jpg",
       "photographer": "",
-      "text": "Otra aventura, pero de secano, es el mágico Desierto de los Coloraos, uno de los parajes más bellos de Granada. Ubicado en Gorafe, debe su nombre al color de sus tierras arcillosas. Son los llamados <i>badlands</i>, unas  'tierras malas' rasgadas por el agua, que han ido dibujando pacientes durante muchos siglos las mismas siluetas arrugadas y distópicas que aparecen en numerosos paisajes filmados en los clásicos de <i>western</i>, aunque también tienen mucho de fondo lunar. No tanto como sus vecinas geológicas localizadas en norteamérica, estas cárcavas también han servido de escenario para ambientar numerosas películas, documentales y anuncios. Para acceder a los miradores más espectaculares es mejor tener un coche, pero si no se quiere perder detalles mirando el GPS, existe la opción contratar los servicios especializados de una de las varias empresas que ofrecen visitas guiadas.",
+      "text": "Otra aventura, pero de secano, es el mágico Desierto de los Coloraos, uno de los parajes más bellos de Granada. Ubicado en Gorafe, debe su nombre al color de sus tierras arcillosas. Son los llamados <i>badlands</i>, unas  'tierras malas' rasgadas por el agua, que ha ido dibujando paciente durante muchos siglos las mismas siluetas arrugadas y distópicas que aparecen en numerosos paisajes filmados en los clásicos de <i>western</i>. Aunque no tanto como sus vecinas geológicas localizadas en norteamérica, estas cárcavas también han servido de escenario para ambientar numerosas películas, documentales y anuncios. Para acceder a los miradores más espectaculares es mejor tener un coche, pero si no se quiere perder detalles mirando el GPS existe la opción contratar los servicios especializados de una de las varias empresas que ofrecen visitas guiadas.",
       "votes": 0
     },
     {
       "title": "El balneario de <strong>Lanjarón</strong>",
       "img_file": "10. Lanjarón.jpg",
       "photographer": "",
-      "text": "La provincia de Granada cuenta con cinco termas, herederos en casi todos los casos de instalaciones romanas o musulmanas: Alhama de Granada, Graena, Alicún de las Torres, Zújar y el más famoso, Lanjarón. Tras el esplendor de los baños árabes, las primeras décadas del XX la hidroterapia volvió a alcanzar un punto álgido con la proliferación de numerosas instalaciones por toda Europa en las que la alta sociedad recibía todo tipo de tratamientos y curas. La abundancia de manantiales en la provincia de Granada contribuyó al 'boom' de este tipo de espacios, que se han ido acondicionando para adaptarse a las modas y sobre todo a los gustos de su clientela sin perder el aire selecto y sofisticado que los hizo populares.",
+      "text": "La provincia de Granada cuenta con cinco termas, herederas en casi todos los casos de instalaciones romanas o musulmanas: Alhama de Granada, Graena, Alicún de las Torres, Zújar y el más famoso, Lanjarón. Tras el esplendor de los baños árabes, las primeras décadas del XX la hidroterapia volvió a alcanzar un punto álgido con la proliferación de numerosas instalaciones por toda Europa en las que la alta sociedad recibía todo tipo de tratamientos y curas. La abundancia de manantiales en la provincia de Granada contribuyó al 'boom' de este tipo de espacios, que se han ido acondicionando para adaptarse a las modas y sobre todo a los gustos de su clientela sin perder el aire selecto y sofisticado que los hizo populares.",
       "votes": 0
     },
     {
@@ -139,7 +138,7 @@
       "title": "Los Tajos de los Bermejales, en el <strong>Poniente</strong>",
       "img_file": "13. Ruta del Tajo de los Bermejales.jpg",
       "photographer": "",
-      "text": "La Ruta de los Tajos de los Bermejales, en  Arenas del Rey, permite asomarse a un paisaje sorprendente y milenario pero que, dada su orografía, entraña algunas dificultades, muchas de ellas salvadas por pasarelas colgantes. No es excesivamente larga, pues se puede realizar en poco más de tres horas, pero hay que extremar la precaución ante la sucesión de saltos de agua, remansos y cascadas que forma el río en su curso y que obligan también a ayudarse de algunas cuerdas para poder avanzar. Parte de la Iglesia del Poblado de los Bermenajes, junto a la que hay un panel informativo, y discurre por un ecosistema de media montaña y fluvial. Es ideal para los que buscan belleza y aventura. ",
+      "text": "La Ruta de los Tajos de los Bermejales, en  Arenas del Rey, permite asomarse a un paisaje sorprendente y milenario pero que, dada su orografía, entraña algunas dificultades, muchas de ellas salvadas por pasarelas colgantes. No es excesivamente larga, pues se puede realizar en poco más de tres horas, pero hay que extremar la precaución ante la sucesión de saltos de agua, remansos y cascadas que forma el río en su curso y que obligan también a ayudarse de algunas cuerdas para poder avanzar. Parte de la Iglesia del Poblado de los Bermenajes, junto a la que hay un panel informativo, y discurre por un ecosistema de media montaña y fluvial. Es ideal para los que buscan naturaleza y aventura. ",
       "votes": 0
     },
   {
@@ -153,7 +152,7 @@
       "title": "Molino de aceite de <strong>Nigüelas</strong>",
       "img_file": "15. Museo del Aceite de Nigüelas.jpg",
       "photographer": "",
-      "text": "Un reformado edificio nazarí construido en el Valle de Lecrín entre los siglos XII y XIV tiene el honor de ser una de las almazaras más antiguas de España. El molino de aceite, situado en el casco urbano de Nigüelas, conserva la maquinaria y muestra de los distinto tipos de molinos que se han utilizado a lo largo de la historia.  Está dividido en cinco dependencias, empezando por el patio de acarreo de aceituna y terminando en el despacho con las tinajas para almacenar el aceite. En ese recorrido distribuido en orden de elaboración, se ofrece como gran aliciente la posibilidad de contemplar un molino de sangre de origen romano, (movido por tracción animal) y otro de agua, junto a dos enormes presas. ",
+      "text": "Un reformado edificio nazarí construido en el Valle de Lecrín entre los siglos XII y XIV tiene el honor de ser una de las almazaras más antiguas de España. El molino de aceite, situado en el casco urbano de Nigüelas, conserva la maquinaria y muestra de los distinto tipos de molinos que se han utilizado a lo largo de la historia.  Está dividido en cinco dependencias, empezando por el patio de acarreo de aceituna y terminando en el despacho con las tinajas para almacenar el aceite. En ese recorrido distribuido en orden de elaboración, se ofrece como gran aliciente la posibilidad de contemplar un molino de sangre de origen romano (movido por tracción animal) y otro de agua, junto a dos enormes presas. ",
       "votes": 0
     }
   ],

@@ -57,6 +57,7 @@ export default {
       },
       whatsapp(){
         const whatsappCode = `whatsapp://send?text=${this.newspaper.titleH1}. ${this.newspaper.URL}`
+        return whatsappCode
       }
     },
   }

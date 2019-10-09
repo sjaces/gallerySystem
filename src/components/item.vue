@@ -9,7 +9,7 @@
 							p Votos: {{ item.votes }}
 								template(v-if="!voted")
 									button.btn(@click="oneMore") +1
-						img.img-fluid.d-block.mx-auto.firma(v-bind:src="img_file" :alt="item.title" @load="fixFirma()")
+						img.img-fluid.d-block.mx-auto(v-bind:src="img_file" :alt="item.title" )
 						.firmaFoto(v-if="item.photographer")
 							span.fa.fa-camera-retro.fa-lg 
 							span.space {{ item.photographer }}
@@ -50,16 +50,6 @@ export default {
     }
   },
   methods: {
-    fixFirma() {
-      const myImage = document.getElementsByClassName("firma")[this.number + 1];
-      const width = myImage.width;
-      if (this.item.photographer) {
-        myImage.nextSibling.setAttribute("style", "width:" + width + "px ;display: inline-block; position: relative; margin-top: -20px;");
-      }
-      if (this.votesVisible) {
-        myImage.previousSibling.setAttribute("style", "width:" + width + "px;");
-      }
-    },
     oneMore() {
       this.$emit("oneMore", this.item.title);
     }
@@ -70,6 +60,8 @@ export default {
 <style lang="scss" >
 .imageGroup {
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
   & img {
     margin-top: 0;
   }
@@ -125,6 +117,6 @@ export default {
 }
 
 .space::before {
-  content: ' ';
+  content: " ";
 }
 </style>

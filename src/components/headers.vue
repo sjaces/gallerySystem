@@ -37,7 +37,8 @@
 
       </div>
   </header>
-       <div class="firmaFoto firmaPortada">
+    
+       <div class="firmaFoto firmaPortada" v-if="cover.photographer" >
         <span class="fa fa-camera-retro fa-lg "> </span> {{cover.photographer}} 
       </div>
 
@@ -55,7 +56,7 @@
           </p>
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
           <img class="img-fluid firma" :src="portada" :alt="cover.alt" />
-           <div class="firmaFoto">
+           <div class="firmaFoto" v-if="cover.photographer">
             <span class="fa fa-camera-retro fa-lg"> </span>| {{cover.photographer}}
           </div> 
           <!--El texto de presentación del especial -->
@@ -75,6 +76,7 @@
 
 <script>
 import cabeceras from '../assets/js/cabeceras.min'
+import ImageDefault from '../assets/image.png'
 
 export default {
   props: {
@@ -97,11 +99,13 @@ export default {
       return ''
     },
      putBackground(){
-      let styles = ` background-size: cover; background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('./data/imagenes/${this.cover.img_file}') no-repeat cover; background-position: top; background-attachment: scroll; margin-top: 70px; min-height: 700px; min-width: 100%;   `
+       let image = (this.cover.img_file) ? this.cover.img_file : ImageDefault 
+      let styles = `background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background-position: top; background-attachment: scroll; margin-top: 70px; min-height: 700px; min-width: 100%;background-repeat: no-repeat;
+    background-size: cover;`;
     return styles
     },
     portada(){
-      console.log("portada", this.cover.img_file)
+      if(!this.cover.img_file) return ImageDefault;
       return `./data/imagenes/${this.cover.img_file}`
     }
   },
@@ -121,5 +125,8 @@ export default {
 <style>
 .firmaPortada {
   padding-right: 10px;
+}
+img.firma {
+  padding-bottom: 1em;
 }
 </style>

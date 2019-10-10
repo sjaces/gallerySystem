@@ -8,8 +8,8 @@
 						.voteBar(v-if="votesVisible")
 							p Votos: {{ item.votes }}
 								template(v-if="!voted")
-									button.btn(@click="oneMore") +1
-						img.img-fluid.d-block.mx-auto(v-bind:src="img_file" :alt="item.title" )
+									button.btn(@click="oneMore") Vota <i class="fa fa-thumbs-up"></i>
+						img.img-fluid.d-block.mx-auto(v-bind:src="img_file" :alt="item.title" @click="oneMore")
 						.firmaFoto(v-if="item.photographer")
 							span.fa.fa-camera-retro.fa-lg 
 							span.space {{ item.photographer }}
@@ -21,12 +21,13 @@
 					h2.lead
 						span.colorDestacado {{ number }}. 
 						span(v-html="item.title") 
-					p.text-left(:id="item.title", v-html="item.text") 
+					div.pt-3(:id="item.title", v-html="item.text") 
 					
     
 </template>
 
 <script>
+import ImageDefault from '../assets/image.png'
 export default {
   props: {
     item: {
@@ -43,6 +44,7 @@ export default {
   },
   computed: {
     img_file() {
+      if(!this.item.img_file) return ImageDefault;
       return "./data/imagenes/" + this.item.img_file;
     },
     votesVisible() {
@@ -69,6 +71,7 @@ export default {
 
 .voteBar {
   /* width: 50%; */
+  /* height: 3.6em; */
   margin: 0 auto;
   background: var(--colorDestacado);
   /* border-radius: 15px 15px 0 0; */
@@ -76,11 +79,14 @@ export default {
   font-size: 0.8em;
   & p {
     color: var(--fondo);
-    margin: 0;
+    margin: 0 .5em;
     font-weight: 900;
+    font-size: 1.2em;
     & button {
       background: var(--fondo);
-      margin: 0 1em;
+      margin: 0 1.4em;
+      color: var(--colorDestacado);
+      font-size: 1.1em;
     }
   }
 }

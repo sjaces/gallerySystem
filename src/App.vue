@@ -58,7 +58,7 @@ export default {
         //pullate the data objects of the application
         //Data related to the publication
         this.newspaper = json.newspaper
-        if( !this.newspaper.ordered || window.localStorage.getItem('voted') ){ this.voted = true};
+        if( !this.newspaper.ordered || window.localStorage.getItem('voted') ){ this.voted = true}
 
         //Data related to de items of the publication
         this.list = json.list
@@ -100,11 +100,11 @@ export default {
         return item === el.title;
       });
 
-        console.log("item ", item, myItem)
+        // console.log("item ", item, myItem)
       // Build the URL to make the query to de DB
       let urlAPI = this.newspaper.db_server + "db.php?id="+this.list[myItem].votesId;
 
-        console.log("item tiene votos:  ", this.list[myItem].votesId)
+        // console.log("item tiene votos:  ", this.list[myItem].votesId)
 
       // I send the AJAX request to see the actual number the votes
       fetch(urlAPI, {
@@ -112,11 +112,11 @@ export default {
         })
         .then(res => res.json())
         .then(res => {
-          console.log("respuest dice que tiene votos: ", res[0].votes)
+          // console.log("respuest dice que tiene votos: ", res[0].votes)
           
           //Then I add a vote to the real number of votes
           this.list[myItem].votes = parseInt(res[0].votes) + 1;
-          console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
+          // console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
 
           // Then I send the AJAX request to add the vote
           fetch(urlAPI, {
@@ -126,9 +126,11 @@ export default {
               })
             })
             .then(res => res.text())
-            .then(res => {console.log(res)
+            .then(res => {
+              // console.log(res)
             this.voted = true
             window.localStorage.setItem("voted", true)
+            window.localStorage.setItem("votedDate", Date())
             this.lookingForVotes()
             })
                         
@@ -157,11 +159,26 @@ export default {
     //Method that loads the ranking data from the external database through an API
     lookingForVotes () {
 
+      /* if(window.localStorage.getItem('votedDate')){
+        let votedDate = new Date(window.localStorage.getItem('votedDate'))
+        // console.log("Votaste: "+votedDate)
+        let gap = (new Date().getTime() - votedDate.getTime())/(1000*60*60*24)
+        // let today = new Date().getDay()
+        // let voteDay = votedDate.getDay()
+        // console.log(today, voteDay)
+        // if(gap>1 || today!==voteDay){
+        if(gap>1){
+          window.localStorage.removeItem('voted')
+          window.localStorage.removeItem('votedDate')
+        }
+        
+      } */
+
       //Builds the API URL
-      let api = this.newspaper.db_server + "db.php?folder=" + this.newspaper.folder;
+      let api = this.newspaper.db_server + "db.php?cabecera="+this.newspaper.cabecera+"&folder=" + this.newspaper.folder;
 
       // let api = this.newspaper.db_server + "api2.php/records/" + "posts" + "/";
-      console.log("looking for votes in ", api)
+      // console.log("looking for votes in ", api)
       fetch(api)
       .then(res => res.json())
       .then(json => {
@@ -183,6 +200,7 @@ export default {
                         method: 'POST',
                        
                         body: JSON.stringify({
+                          cabecera: this.newspaper.cabecera,
                           folder: this.newspaper.folder,
                           item: item.img_file,
                           votes: 0
@@ -190,7 +208,7 @@ export default {
                       })
                       .then(res => res.text()) // OR res.json()
                       .then(res => {
-                        console.log(res)
+                        // console.log(res)
                         items--
                         if(items===0){
                           this.lookingForVotes()

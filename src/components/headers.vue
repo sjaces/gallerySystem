@@ -21,7 +21,7 @@
   </nav>
 
   <!--Texto e imagen de apertura escritorio. La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
-  <header class="py-5 bg-image-full degradado desktop" id="imagenFondo" :style="putBackground" >
+  <header class="py-1 bg-image-full degradado desktop" id="imagenFondo" :style="putBackground" >
       <div class="row align-items-end">
         <div class="col-md-10 col-center">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
@@ -99,9 +99,20 @@ export default {
       return ''
     },
      putBackground(){
-       let image = (this.cover.img_file) ? this.cover.img_file : ImageDefault 
-      let styles = `background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background-position: top; background-attachment: scroll; margin-top: 70px; min-height: 700px; min-width: 100%;background-repeat: no-repeat;
-    background-size: cover;`;
+       let image = (this.cover.img_file) ? this.portada : ImageDefault 
+      // let styles = `background-repeat: no-repeat !important; background-size: cover; background-position: top; background-attachment: scroll; margin-top: 70px; min-height: 700px; min-width: 100%; background: -moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: -webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}'); background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}');  `;
+      let styles = {
+        marginTop: '70px', 
+        minHeight: '700px', 
+        minWidth: '100%', 
+        background: `-moz-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}') no-repeat`,
+        background: `-webkit-linear-gradient(top, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}') no-repeat`,
+        background: `linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url('${image}') no-repeat`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover !important", 
+        backgroundPosition: "top", 
+        backgroundAttachment: "scroll"
+        }
     return styles
     },
     portada(){
@@ -129,4 +140,5 @@ export default {
 img.firma {
   padding-bottom: 1em;
 }
+
 </style>

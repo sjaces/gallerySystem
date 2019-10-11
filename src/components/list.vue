@@ -24,6 +24,7 @@ export default {
 				if(this.list){
 					return this.list.length
 				}
+				return 0
 			},
 			ratioBanners(){
 				if(this.totalItems>10){

@@ -7,14 +7,14 @@
     "site": "dsv",
     "googleCode": "GTM-W5GDNS",
     "domain": "diariodesevilla.es",
-    "title": "El pueblo más bonito",
-    "titleH1": "El pueblo más bonito de Sevilla",
-    "subtitle": "Contemplar panorámicas de paisajes lunares, dormir en casas-cueva, visitar yacimientos arqueológicos únicos en la península ibérica o bucear por algunos de los ecosistemas más bellos del Mediterráneo forman parte de la lista de actividades para hacer turismo sin pisar la capital.",
-    "shortDescription": "Granada es reconocida como un gran destino para viajeros de todo el mundo, pero sus monumentos y lugares visitables van más allá de la Alhambra y los barrios que la rodean. En toda la provincia encontramos tesoros a menudo apartados de la masificación del turismo de la ciudad. Estos son 15 rincones que deben descubrir los que aún no se hayan aventurado a hacerlo.",
-    "description": "Granada es reconocida como un gran destino para viajeros de todo el mundo, pero sus monumentos y lugares visitables van más allá de la Alhambra y los barrios que la rodean. En toda la provincia encontramos tesoros a menudo apartados de la masificación del turismo de la ciudad. Estos son 15 rincones que deben descubrir los que aún no se hayan aventurado a hacerlo.",
+    "title": "Los pueblos con más encanto de Sevilla",
+    "titleH1": "Elige el pueblo con más encanto de Sevilla",
+    "subtitle": "¿Cuál es el pueblo más bonito de Sevilla?",
+    "shortDescription": "¿Cuál es el pueblo más bonito de Sevilla? A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial.",
+    "description": "A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial. Tras un periplo de 15 días difundiendo sus paisajes y sus valores, llega la hora de la elección ¡Ayúdanos a elegir el pueblo con más encanto con tu voto!",
     "keywords": ["Sevilla", "lugares", "visitar"],
-    "twitterSite": "@diariodesevilla",
-    "URL": "https://www.granadahoy.com/temas/15-lugares-visitar-Granada-imprescindibles/index.php",
+    "twitterSite": "diariosevilla",
+    "URL": "https://www.diariodesevilla.es/temas/pueblos-mas-encanto-provincia-sevilla/index.php",
     "authors": [
       {
         "name": "Ángel J Cachón de Elías",
@@ -27,14 +27,24 @@
         "role" : "Diseño y Programación"
       },
       {
-        "name": "Belén Rico",
+        "name": "Magdalena Trillo",
+        "link": "",
+        "role" : "Diseño y Programación"
+      },
+      {
+        "name": "Magdalena Trillo",
+        "link": "",
+        "role" : "Diseño y Programación"
+      },
+      {
+        "name": "Magdalena Trillo",
         "link": "",
         "role" : "redacción"
       }
     ],
     "ordered": false,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/",
-    "folder": "top-pueblos",
+    "folder": "pueblos-mas-encanto-provincia-sevilla",
     "logos": "color",
     "backgroundColor": "#FFF",
     "color": "#000",
@@ -44,123 +54,123 @@
     "over": "#000"
   },
   "cover":{
-    "img_file": "",
-    "alt": "",
-    "photographer": ""
+    "img_file": "pueblos3.jpg",
+    "alt": "Los pueblos con más encanto de Sevilla",
+    "photographer": "Pedro Moreno"
   },
   "list": [
     {
-      "title": "Sanlúcar la Mayor, la ciudad del sol",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Sanlucar-Mayor-ciudad-sol_0_1395160611.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/galerias_graficas/fotos-Sanlucar-Mayor_3_1395490444.html' class='btn btn-primary' target='_blank'>Conoce Sanlúcar la Mayor</a>",
+      "title": "Sanlúcar la Mayor",
+      "img_file": "01-Sanlucar-Mayor.jpg",
+      "photographer": "José Ángel García",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Sanlucar-Mayor-ciudad-sol_0_1395160611.html' target='_blank'>Sanlúcar la Mayor, la ciudad del sol</a> <br><a href='https://www.diariodesevilla.es/galerias_graficas/fotos-Sanlucar-Mayor_3_1395490444.html' class='btn btn-primary' target='_blank'>Sanlúcar la Mayor, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Guadalcanal, a la luz de las estrellas",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Guadalcanal-luz-estrellas_0_1395160604.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/galerias_graficas/Guadalcanal-imagenes_3_1395490446.html' class='btn btn-primary' target='_blank'>Conoce Guadalcanal</a>",
+      "title": "Guadalcanal",
+      "img_file": "02-Guadalcanal.jpg",
+      "photographer": "Antonio Pizarro",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Guadalcanal-luz-estrellas_0_1395160604.html' target='_blank'>Guadalcanal, a la luz de las estrellas</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Guadalcanal-imagenes_3_1395490446.html' class='btn btn-primary' target='_blank'>Guadalcanal, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Constantina, historia y arte de la mano de Hernán Ruiz",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Constantina-historia-arte-mano-Hernan-Ruiz_0_1395160603.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/galerias_graficas/Constantina-imagenes_3_1395490447.html' class='btn btn-primary' target='_blank'>Conoce Constantina</a>",
+      "title": "Constantina",
+      "img_file": "03-Constantina.jpg",
+      "photographer": "Antonio Pizarro",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Constantina-historia-arte-mano-Hernan-Ruiz_0_1395160603.html' target='_blank'>Constantina, historia y arte de la mano de Hernán Ruiz</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Constantina-imagenes_3_1395490447.html' class='btn btn-primary' target='_blank'>Constantina, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Villanueva del Río y Minas, tierra de Duques y minerales ",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Villanueva-Rio-Minas-Duques-minerales_0_1395160600.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/galerias_graficas/Villanueva-Rio-Minas-imagenes_3_1395490448.html' class='btn btn-primary' target='_blank'>Conoce Villanueva del Río y Minas</a>",
+      "title": "Villanueva del Río y Minas",
+      "img_file": "04-Villanueva-Rio-Minas.jpg",
+      "photographer": "Antonio Pizarro",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Villanueva-Rio-Minas-Duques-minerales_0_1395160600.html' target='_blank'>Villanueva del Río y Minas, tierra de Duques y minerales</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Villanueva-Rio-Minas-imagenes_3_1395490448.html' class='btn btn-primary' target='_blank'>Villanueva del Río y Minas, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Utrera, cuna de la pureza flamenca",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Utrera-cuna-pureza-flamenca_0_1395160594.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/galerias_graficas/Utrera-imagenes_3_1395490449.html' class='btn btn-primary' target='_blank'>Conoce Utrera</a>",
+      "title": "Utrera",
+      "img_file": "05-Utrera.jpg",
+      "photographer": "Juan Carlos Muñoz",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Utrera-cuna-pureza-flamenca_0_1395160594.html' target='_blank'>Utrera, cuna de la pureza flamenca</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Utrera-imagenes_3_1395490449.html' class='btn btn-primary' target='_blank'>Utrera, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Todos los senderos conducen a Cazalla de la Sierra",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/todos-senderos-llevan-Cazalla-Sierra_0_1396360531.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Cazalla-Sierra-imagenes_3_1396390350.html' class='btn btn-primary' target='_blank'>Conoce Cazalla de la Sierra</a>",
+      "title": "Cazalla de la Sierra",
+      "img_file": "06-Cazalla-Sierra.jpg",
+      "photographer": "Antonio Pizarro",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/todos-senderos-llevan-Cazalla-Sierra_0_1396360531.html' target='_blank'>Todos los senderos conducen a Cazalla de la Sierra</a><br> <a href='https://www.diariodesevilla.es/provincia/Cazalla-Sierra-imagenes_3_1396390350.html' class='btn btn-primary' target='_blank'>Cazalla de la Sierra, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Fuentes de Andalucía, una localidad señorial",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-localidad-casas-senoriales_0_1396660623.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-imagenes_3_1396990289.html' class='btn btn-primary' target='_blank'>Conoce Fuentes de Andalucía</a>",
+      "title": "Fuentes de Andalucía",
+      "img_file": "07-Fuentes-Andalucia.jpg",
+      "photographer": "Juan Carlos Muñoz",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-localidad-casas-senoriales_0_1396660623.html' target='_blank'>Fuentes de Andalucía, una localidad señorial</a><br> <a href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-imagenes_3_1396990289.html' class='btn btn-primary' target='_blank'>Fuentes de Andalucía, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Lebrija, la ciudad del dios Baco",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Lebrija-ciudad-dios-Baco_0_1394560861.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Lebrija-imagenes_3_1396990306.html' class='btn btn-primary' target='_blank'>Conoce Lebrija</a>",
+      "title": "Lebrija",
+      "img_file": "08-Lebrija.jpg",
+      "photographer": "Juan Carlos Muñoz",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Lebrija-ciudad-dios-Baco_0_1394560861.html' target='_blank'>Lebrija, la ciudad del dios Baco</a> <br><a href='https://www.diariodesevilla.es/provincia/Lebrija-imagenes_3_1396990306.html' class='btn btn-primary' target='_blank'>Lebrija, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Un recorrido por Arahal, la cuna de la aceituna de mesa",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Arahal-cuna-mundial-aceituna-mesa_0_1394560779.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Arahal-imagenes_3_1397290265.html' class='btn btn-primary' target='_blank'>Conoce Arahal</a>",
+      "title": "Arahal",
+      "img_file": "09-Arahal.jpg",
+      "photographer": "Juan Carlos Váquez",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Arahal-cuna-mundial-aceituna-mesa_0_1394560779.html' target='_blank'>Un recorrido por Arahal, la cuna de la aceituna de mesa</a> <br><a href='https://www.diariodesevilla.es/provincia/Arahal-imagenes_3_1397290265.html' class='btn btn-primary' target='_blank'>Arahal, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Olivares, la tierra del Barroco",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Olivares-tierra-Barroco_0_1394260849.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Olivares-imagenes_3_1397290266.html' class='btn btn-primary' target='_blank'>Conoce Olivares</a>",
+      "title": "Olivares",
+      "img_file": "10-Olivares.jpg",
+      "photographer": "Juan Carlos Muñoz",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Olivares-tierra-Barroco_0_1394260849.html' target='_blank'>Olivares, la tierra del Barroco</a><br> <a href='https://www.diariodesevilla.es/provincia/Olivares-imagenes_3_1397290266.html' class='btn btn-primary' target='_blank'>Olivares, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Osuna, la ciudad señorial",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Osuna-ciudad-senorial_0_1397260378.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Osuna-imagenes_3_1397290269.html' class='btn btn-primary' target='_blank'>Conoce Osuna</a>",
+      "title": "Osuna",
+      "img_file": "11-Osuna.jpg",
+      "photographer": "Juan Carlos Vázquez",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Osuna-ciudad-senorial_0_1397260378.html' target='_blank'>Osuna, la ciudad señorial</a><br> <a href='https://www.diariodesevilla.es/provincia/Osuna-imagenes_3_1397290269.html' class='btn btn-primary' target='_blank'>Osuna, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Marchena: flamenco, sensibilidad y señorío",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Marchena-Flamenco-sensibilidad-senorio_0_1397260585.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Marchena-imagenes_3_1398490140.html' class='btn btn-primary' target='_blank'>Conoce Marchena</a>",
+      "title": "Marchena",
+      "img_file": "12-Marchena.jpg",
+      "photographer": "Juan Carlos Vázquez",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Marchena-Flamenco-sensibilidad-senorio_0_1397260585.html' target='_blank'>Flamenco, sensibilidad y señorío</a> <br><a href='https://www.diariodesevilla.es/provincia/Marchena-imagenes_3_1398490140.html' class='btn btn-primary' target='_blank'>Marchena, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Écija, la ciudad del sol",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Ecija-ciudad-sol_0_1396660612.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Ecija-imagenes_3_1398490141.html' class='btn btn-primary' target='_blank'>Conoce Écija</a>",
+      "title": "Écija",
+      "img_file": "13-Ecija.jpg",
+      "photographer": "José Ángel García",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Ecija-ciudad-sol_0_1396660612.html' target='_blank'>Écija, la ciudad del sol</a> <br><a href='https://www.diariodesevilla.es/provincia/Ecija-imagenes_3_1398490141.html' class='btn btn-primary' target='_blank'>Écija, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Estepa, corazón de Andalucía",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Estepa-corazon-Andalucia_0_1397560368.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Estepa-imagenes_3_1398490142.html' class='btn btn-primary' target='_blank'>Conoce Estepa</a>",
+      "title": "Estepa",
+      "img_file": "14-Estepa.jpg",
+      "photographer": "Juan Carlos Vázquez",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Estepa-corazon-Andalucia_0_1397560368.html' target='_blank'>Estepa, corazón de Andalucía</a><br> <a href='https://www.diariodesevilla.es/provincia/Estepa-imagenes_3_1398490142.html' class='btn btn-primary' target='_blank'>Estepa, en imágenes</a>",
       "votes": 0
     },
     {
-      "title": "Carmona, uno de los pueblos más bonitos de España",
-      "img_file": "",
-      "photographer": "",
-      "text": "<a class='btn btn-primary' href='https://www.diariodesevilla.es/provincia/Carmona-pueblos-bonitos-Espana_0_1394860724.html' target='_blank'>Conoce el pueblo</a> <a href='https://www.diariodesevilla.es/provincia/Carmona-imagenes_3_1397290271.html' class='btn btn-primary' target='_blank'>Conoce Carmona</a>",
+      "title": "Carmona",
+      "img_file": "15-Carmona.jpg",
+      "photographer": "Antonio Pizarro",
+      "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Carmona-pueblos-bonitos-Espana_0_1394860724.html' target='_blank'>Carmona, uno de los pueblos más bonitos de España</a> <br><a href='https://www.diariodesevilla.es/provincia/Carmona-imagenes_3_1397290271.html' class='btn btn-primary' target='_blank'>Carmona, en imágenes</a>",
       "votes": 0
     }
   ],
   "teInteresa": [
-    {"title": "Las 20 mejores playas de Granada",
-    "url": "https://www.granadahoy.com/temas/mejores-playas-granada/index.php"},
-    {"title": "20 tapas en Granada que hay que probar",
-      "url": "https://www.granadahoy.com/temas/20-tapas-Granada-para-probar/index.php"},
-    {"title": "Las 10 terrazas de copas con mejores vistas de Granada",
-      "url": "https://www.granadahoy.com/temas/10-terrazas-Granada-vistas-Alhambra-Vega-Sierra-Nevada/index.php"}
+    {"title": "20 lugares para visitar en Sevilla sin pisar la capital",
+    "url": "https://www.diariodesevilla.es/especiales/19/visitar-sevilla-20-lugares-para-visitar-sin-pisar-la-capital/index.php"},
+    {"title": "Doce rutas para hacer senderismo en Sevilla",
+      "url": "https://www.diariodesevilla.es/temas/doce-rutas-senderismo-sevilla/index.php"},
+    {"title": "Los 14 monumentos de Sevilla de la Lista Roja del Patrimonio",
+      "url": "https://www.diariodesevilla.es/especiales/19/monumentos-de-Sevilla-en-peligro/index.php"}
   ]
 }

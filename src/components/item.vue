@@ -21,7 +21,7 @@
 					h2.lead
 						span.colorDestacado {{ number }}. 
 						span(v-html="item.title") 
-					div.pt-3(:id="item.title", v-html="item.text") 
+					div(:id="item.title", v-html="item.text") 
 					
     
 </template>
@@ -49,6 +49,7 @@ export default {
     },
     votesVisible() {
       if (this.item.votes) return true;
+      return false
     }
   },
   methods: {
@@ -124,5 +125,8 @@ export default {
 
 .space::before {
   content: " ";
+}
+.btn {
+  margin: 0.4em 0.5em
 }
 </style>

@@ -51,8 +51,9 @@ export default {
     //Here I make things before mounting the app component
   },
   mounted() {
+      let hash = new Date().getTime()
       //Load data from the data file and configuration
-      fetch("./data/data.json") // <-- data file in json format
+      fetch("./data/data.json?hash="+hash) // <-- data file in json format
       .then(res => res.json())
       .then(json => {
         //pullate the data objects of the application

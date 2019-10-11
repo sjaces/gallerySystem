@@ -50,6 +50,7 @@ export default {
           const facebookURL = `http://www.facebook.com/share.php?u=${this.newspaper.URL}&title=${this.newspaper.titleH1}`
         return facebookURL
         }
+        return ''
       },
       twitter() {
         const twitterURL = `https://twitter.com/share?url=${this.newspaper.URL}&text=${this.newspaper.titleH1}. Vía @${this.newspaper.twitterSite}`

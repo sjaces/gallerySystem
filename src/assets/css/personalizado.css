@@ -143,11 +143,9 @@ p {
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: cover;
+    background-size: cover !important;
     margin-top: 70px;
     min-height: 700px;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10px
 }
 

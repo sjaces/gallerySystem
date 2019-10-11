@@ -3,9 +3,12 @@
     <div class="row">
       <div class="col-12 text-center firma">
         <template v-for="item in roles">
-        <p class="authors">
+        <p class="authors" v-bind:key="item">
           <strong>{{item}}: </strong>
-          <span v-for="author in authorsOfRole(item)" class="coma" :key="author.name"> <a v-if="author.link" :href="author.link" target="_blank">{{ author.name }}</a> <template v-if="!author.link">{{author.name}}</template></span>
+          <span v-for="(author, index) in authorsOfRole(item)" class="coma" :key="author.name" :index="index" :total="authorsOfRole(item).length">
+             <template v-if="(index+1) === (authorsOfRole(item).length) && authorsOfRole(item).length!=1"> y </template> 
+             <template v-else-if="authorsOfRole(item).length!=1 && index != 0">, </template>
+             <a v-if="author.link" :href="author.link" target="_blank">{{ author.name }}</a> <template v-if="!author.link">{{author.name}}</template></span>
         </p>
         </template>
       </div>
@@ -56,12 +59,12 @@ export default {
   content: '.';
 }
 
-.coma::before {
+/* .coma::before {
   content: '';
 }
 .coma::after {
   content: ', ';
-}
+} */
 
 .authors strong {
   text-transform: uppercase

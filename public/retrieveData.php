@@ -10,8 +10,12 @@
       echo "<!-- $PRODUCTION -->";
       echo "<!-- URL $URL  -->";
       $pos = strpos($URL, "index.php")-1;
-      $URLBASE = (str_split($URL, $pos));
-      $URLBASE = $URLBASE[0];
+      if($pos!=-1){
+          $URLBASE = (str_split($URL, $pos));
+          $URLBASE = $URLBASE[0];
+        }else{
+            $URLBASE =  rtrim($URL, "/");
+        }
       echo "<!-- URLBASE $URLBASE  -->";
 
 

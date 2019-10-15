@@ -11,7 +11,7 @@
     "titleH1": "Elige el pueblo con más encanto de Sevilla",
     "subtitle": "¿Cuál es el pueblo más bonito de Sevilla?",
     "shortDescription": "¿Cuál es el pueblo más bonito de Sevilla? A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial.",
-    "description": "A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial. Tras un periplo de 15 días difundiendo sus paisajes y sus valores, llega la hora de la elección ¡Ayúdanos a elegir el pueblo con más encanto con tu voto!",
+    "description": "A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial. Tras un periplo de 15 días difundiendo sus paisajes y sus valores, llega la hora de la elección ¡Ayúdanos a elegir el pueblo con más encanto con tu voto! <br> Sólo se puede votar una vez cada 24 horas y sólo por uno de los 15 pueblos candidatos.  El orden del listado irá cambiando según avancen las votaciones en sentido descendente.",
     "keywords": ["Sevilla", "lugares", "visitar"],
     "twitterSite": "diariosevilla",
     "URL": "https://www.diariodesevilla.es/temas/pueblos-mas-encanto-provincia-sevilla/index.php",
@@ -27,22 +27,17 @@
         "role" : "Diseño y Programación"
       },
       {
-        "name": "Magdalena Trillo",
+        "name": "M. Trillo",
         "link": "",
-        "role" : "Diseño y Programación"
+        "role" : "Coordinación"
       },
       {
-        "name": "Magdalena Trillo",
+        "name": "F. Barquilla",
         "link": "",
-        "role" : "Diseño y Programación"
-      },
-      {
-        "name": "Magdalena Trillo",
-        "link": "",
-        "role" : "redacción"
+        "role" : "Coordinación"
       }
     ],
-    "ordered": false,
+    "ordered": true,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/",
     "folder": "pueblos-mas-encanto-provincia-sevilla",
     "logos": "color",
@@ -54,9 +49,9 @@
     "over": "#000"
   },
   "cover":{
-    "img_file": "pueblos3.jpg",
+    "img_file": "portada.jpg",
     "alt": "Los pueblos con más encanto de Sevilla",
-    "photographer": "Pedro Moreno"
+    "photographer": ""
   },
   "list": [
     {

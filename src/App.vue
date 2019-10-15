@@ -59,8 +59,15 @@ export default {
         //pullate the data objects of the application
         //Data related to the publication
         this.newspaper = json.newspaper
-        if( !this.newspaper.ordered || window.localStorage.getItem('voted') ){ this.voted = true}
-
+       if(!this.newspaper.ordered || window.localStorage.getItem('voted')){
+          let today = new Date()
+          today = this.getDateFormated(today)
+          let votedDate
+          if(window.localStorage.getItem('votedDate')) votedDate =  window.localStorage.getItem('votedDate');
+          console.log (today, votedDate)
+          if(today === votedDate) this.voted = true
+          console.log (today, votedDate)
+         }
         //Data related to de items of the publication
         this.list = json.list
 
@@ -119,6 +126,11 @@ export default {
           this.list[myItem].votes = parseInt(res[0].votes) + 1;
           // console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
 
+            this.voted = true
+            window.localStorage.setItem("voted", true)
+            window.localStorage.setItem("votedDate", this.getDateFormated(Date()))
+            console.log(window.localStorage.getItem("votedDate"))
+
           // Then I send the AJAX request to add the vote
           fetch(urlAPI, {
               method: 'POST',
@@ -129,9 +141,7 @@ export default {
             .then(res => res.text())
             .then(res => {
               // console.log(res)
-            this.voted = true
-            window.localStorage.setItem("voted", true)
-            window.localStorage.setItem("votedDate", Date())
+            
             this.lookingForVotes()
             })
                         
@@ -223,6 +233,15 @@ export default {
       }
       )
       
+    },
+    getDateFormated(date) {
+      let dateOk = new Date(date)
+      let year = dateOk.getFullYear()
+      let month = dateOk.getMonth()+1
+      let day = dateOk.getDate()
+
+      let dateText = `${year}-${month}-${day}`
+      return dateText
     }
     
   }
@@ -231,5 +250,4 @@ export default {
 </script>
 
 <style>
-
 </style>

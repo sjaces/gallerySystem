@@ -7,7 +7,7 @@
 					div.imageGroup
 						.voteBar(v-if="votesVisible")
 							p Votos: {{ item.votes }}
-								template(v-if="!voted")
+								template(v-if="!voted && !closedVoting")
 									button.btn(@click="oneMore") Vota <i class="fa fa-thumbs-up"></i>
 						img.img-fluid.d-block.mx-auto(v-bind:src="img_file" :alt="item.title" @click="oneMore")
 						.firmaFoto(v-if="item.photographer")
@@ -35,6 +35,9 @@ export default {
       required: true
     },
     voted: {
+      type: Boolean
+    },
+    closedVoting: {
       type: Boolean
     },
     number: {

@@ -3,7 +3,7 @@
     #app
       Headers(:newspaper="newspaper" :cover="cover" :logos="newspaper.logos")
       Authors(:authors="newspaper.authors")
-      List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted")
+      List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted" :closedVoting="closedVoting")
       Recomendations(:teInteresa="teInteresa")
       Footer
       ShareButtons(:newspaper="newspaper")
@@ -44,6 +44,9 @@ export default {
       }else{
         return this.list
       }
+    },
+    closedVoting() {
+      return (this.newspaper.closedVoting) ? this.newspaper.closedVoting : false
     }
   },
  
@@ -59,6 +62,7 @@ export default {
         //pullate the data objects of the application
         //Data related to the publication
         this.newspaper = json.newspaper
+        console.log("closed", this.newspaper.closedVoting)
        if(!this.newspaper.ordered || window.localStorage.getItem('voted')){
           let today = new Date()
           today = this.getDateFormated(today)

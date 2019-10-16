@@ -38,6 +38,7 @@
       }
     ],
     "ordered": true,
+    "closedVoting": false,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/",
     "folder": "pueblos-mas-encanto-provincia-sevilla",
     "logos": "color",

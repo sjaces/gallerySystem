@@ -103,7 +103,7 @@
     
 
     <!--Una descripción del especial, necesario para buscadores. Rellenarlo sin espacios ni intros-->
-    <meta name="description" content="<?=$obj->newspaper->description?>" />
+    <meta name="description" content="<?=strip_tags($obj->newspaper->description)?>" />
     <!--Palabras claves del especial, necesario para buscadores. Separadas por comas.-->
     <meta name="keywords" content="<?=$keywords?>" />
     
@@ -119,7 +119,7 @@
     <!--El título del especial para cuando se comparta en Twitter-->
     <meta name="twitter:title" content="<?=$obj->newspaper->titleH1?>">
     <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
-    <meta name="twitter:description" content="<?=$obj->newspaper->shortDescription?>">
+    <meta name="twitter:description" content="<?=strip_tags($obj->newspaper->shortDescription)?>">
     <!--URL de la imagen con la que se va a compartir en TW el especial. Puede ser cualquiera del especial-->
     <meta name="twitter:image:src" content="<?=$URLBASE?>/data/imagenes/portada.jpg">  
     
@@ -128,7 +128,7 @@
     <meta property="og:title" content="<?=$obj->newspaper->titleH1?>" />
     <meta property="og:type" content="article" />
     <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
-    <meta property="og:description" content="<?=$obj->newspaper->shortDescription?>" />
+    <meta property="og:description" content="<?=strip_tags($obj->newspaper->shortDescription)?>" />
     <!--Palabras claves del especial. Separadas por comas.-->
     <meta name="keywords" content="<?php 
     foreach ($obj->newspaper->keywords as $v) {echo " $v ,";  }?>" />

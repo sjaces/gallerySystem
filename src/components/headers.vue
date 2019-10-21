@@ -47,12 +47,10 @@
       <div class="row ">
         <div class="pt-3 col-md-12 ">
           <!--El h1 del especial. Muy importante para SEO. Consultar con Fran-->
-          <h1 class="ibm">
-            {{ newspaper.titleH1 }}
+          <h1 class="ibm" v-html="newspaper.titleH1">
           </h1>
           <!--La entradilla del especial -->
-          <p class="subtitulo">
-            {{ newspaper.subtitle }}
+          <p class="subtitulo" v-html="newspaper.subtitle">
           </p>
           <!--La imagen de apertura del especial para móvil.La imagen que queremos que aparezca aquí debe llamarse "portada.jpg" y estar en la carpeta "imagenes"-->
           <img class="img-fluid firma" :src="portada" :alt="cover.alt" />
@@ -60,8 +58,7 @@
             <span class="fa fa-camera-retro fa-lg"> </span>| {{cover.photographer}}
           </div> 
           <!--El texto de presentación del especial -->
-          <p>
-            {{newspaper.description}}
+          <p v-html="newspaper.description">
           </p>
           <!-- Introducción -->
           <br />

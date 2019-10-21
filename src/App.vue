@@ -62,15 +62,15 @@ export default {
         //pullate the data objects of the application
         //Data related to the publication
         this.newspaper = json.newspaper
-        console.log("closed", this.newspaper.closedVoting)
+        // console.log("closed", this.newspaper.closedVoting)
        if(!this.newspaper.ordered || window.localStorage.getItem('voted')){
           let today = new Date()
           today = this.getDateFormated(today)
           let votedDate
           if(window.localStorage.getItem('votedDate')) votedDate =  window.localStorage.getItem('votedDate');
-          console.log (today, votedDate)
+          // console.log (today, votedDate)
           if(today === votedDate) this.voted = true
-          console.log (today, votedDate)
+          // console.log (today, votedDate)
          }
         //Data related to de items of the publication
         this.list = json.list
@@ -133,7 +133,7 @@ export default {
             this.voted = true
             window.localStorage.setItem("voted", true)
             window.localStorage.setItem("votedDate", this.getDateFormated(Date()))
-            console.log(window.localStorage.getItem("votedDate"))
+            // console.log(window.localStorage.getItem("votedDate"))
 
           // Then I send the AJAX request to add the vote
           fetch(urlAPI, {

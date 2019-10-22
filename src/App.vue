@@ -4,7 +4,7 @@
       Headers(:newspaper="newspaper" :cover="cover" :logos="newspaper.logos")
       Authors(:authors="newspaper.authors")
       List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted" :closedVoting="closedVoting")
-      Recomendations(:teInteresa="teInteresa")
+      Recomendations(:teInteresa="teInteresa" v-if="showTeInteresa")
       Footer
       ShareButtons(:newspaper="newspaper")
 </template>
@@ -47,6 +47,9 @@ export default {
     },
     closedVoting() {
       return (this.newspaper.closedVoting) ? this.newspaper.closedVoting : false
+    },
+    showTeInteresa() {
+      return (this.teInteresa.length > 0 ) ?  true :  false
     }
   },
  

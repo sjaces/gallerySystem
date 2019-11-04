@@ -37,6 +37,7 @@
         "role" : "Coordinación"
       }
     ],
+    "numbers": false,
     "ordered": true,
     "closedVoting": false,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/",

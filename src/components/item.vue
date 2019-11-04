@@ -19,7 +19,7 @@
 						//- 	template(v-if="!voted")
 						//- 		button.btn(@click="oneMore") +1
 					h2.lead
-						span.colorDestacado {{ number }}. 
+						span.colorDestacado(v-if="numbers") {{ number }}. 
 						span(v-html="item.title") 
 					div(:id="item.title", v-html="item.text") 
 					
@@ -43,6 +43,10 @@ export default {
     number: {
       type: Number,
       required: true
+    },
+    numbers: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {

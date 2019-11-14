@@ -38,9 +38,7 @@
       }
     ],
     "numbers": false,
-    "ordered": true,
-    "closedVoting": false,
-    "db_server": "https://www.diariodesevilla.es/temas/utils/api/",
+    "alignment": "text-center",
     "folder": "pueblos-mas-encanto-provincia-sevilla",
     "logos": "color",
     "backgroundColor": "#FFF",
@@ -48,7 +46,10 @@
     "mainColor": "#008cb1",
     "headerBackground": "#FFF",
     "sharer": "#FFF",
-    "over": "#000"
+    "over": "#000",
+    "ordered": true,
+    "closedVoting": false,
+    "db_server": "https://www.diariodesevilla.es/temas/utils/api/"
   },
   "cover":{
     "img_file": "portada.jpg",

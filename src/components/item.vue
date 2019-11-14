@@ -21,7 +21,7 @@
 					h2.lead
 						span.colorDestacado(v-if="numbers") {{ number }}. 
 						span(v-html="item.title") 
-					div(:id="item.title", v-html="item.text") 
+					div(:id="item.title", :class="alignment", v-html="item.text") 
 					
     
 </template>
@@ -47,6 +47,10 @@ export default {
     numbers: {
       type: Boolean,
       default: true
+    },
+    alignment: {
+      type: String,
+      default: "text-left"
     }
   },
   computed: {

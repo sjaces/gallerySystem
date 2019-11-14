@@ -3,7 +3,7 @@
     #app
       Headers(:newspaper="newspaper" :cover="cover" :logos="newspaper.logos")
       Authors(:authors="newspaper.authors")
-      List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted" :closedVoting="closedVoting" :numbers="newspaper.numbers")
+      List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted" :closedVoting="closedVoting" :numbers="newspaper.numbers" :alignment="newspaper.alignment")
       Recomendations(:teInteresa="teInteresa" v-if="showTeInteresa")
       Footer
       ShareButtons(:newspaper="newspaper")

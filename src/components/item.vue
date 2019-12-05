@@ -4,12 +4,12 @@
 			.row
 				.col-md-12
 					.item.hidden(v-html="item.title")
-					div.imageGroup
+					div.imageGroup(v-lazyload)
 						.voteBar(v-if="votesVisible")
 							p Votos: {{ item.votes }}
 								template(v-if="!voted && !closedVoting")
 									button.btn(@click="oneMore") Vota <i class="fa fa-thumbs-up"></i>
-						img.img-fluid.d-block.mx-auto(v-bind:src="img_file" :alt="item.title" @click="oneMore")
+						img.img-fluid.d-block.mx-auto(:data-url="img_file" :alt="item.title" @click="oneMore")
 						.firmaFoto(v-if="item.photographer")
 							span.fa.fa-camera-retro.fa-lg 
 							span.space {{ item.photographer }}

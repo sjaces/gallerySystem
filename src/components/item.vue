@@ -9,7 +9,7 @@
 							p Votos: {{ item.votes }}
 								template(v-if="!voted && !closedVoting")
 									button.btn(@click="oneMore") Vota <i class="fa fa-thumbs-up"></i>
-						img.img-fluid.d-block.mx-auto(:data-url="img_file" :alt="item.title" @click="oneMore")
+						img.img-fluid.d-block.mx-auto(:src="imgDefault" :data-url="img_file" :alt="item.title" @click="oneMore")
 						.firmaFoto(v-if="item.photographer")
 							span.fa.fa-camera-retro.fa-lg 
 							span.space {{ item.photographer }}
@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import ImageDefault from '../assets/image.png'
+import ImageDefault from "../assets/image.png";
+import ImageLoading from "../assets/loading.gif";
 export default {
   props: {
     item: {
@@ -55,12 +56,15 @@ export default {
   },
   computed: {
     img_file() {
-      if(!this.item.img_file) return ImageDefault;
+      if (!this.item.img_file) return ImageDefault;
       return "./data/imagenes/" + this.item.img_file;
     },
     votesVisible() {
       if (this.item.votes) return true;
-      return false
+      return false;
+    },
+    imgDefault() {
+      return ImageLoading;
     }
   },
   methods: {
@@ -91,7 +95,7 @@ export default {
   font-size: 0.8em;
   & p {
     color: var(--fondo);
-    margin: 0 .5em;
+    margin: 0 0.5em;
     font-weight: 900;
     font-size: 1.2em;
     & button {
@@ -138,6 +142,6 @@ export default {
   content: " ";
 }
 .btn {
-  margin: 0.4em 0.5em
+  margin: 0.4em 0.5em;
 }
 </style>

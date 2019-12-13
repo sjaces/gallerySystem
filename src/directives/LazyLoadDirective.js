@@ -5,7 +5,7 @@ export default {
 
       if (imageElement) {
         imageElement.addEventListener("load", () => {
-          setTimeout(() => el.classList.add("loaded"), 100);
+          setTimeout(() => el.classList.add("loaded"), 200);
         });
         imageElement.addEventListener("error", () => console.log("error"));
         imageElement.src = imageElement.dataset.url;
@@ -27,7 +27,7 @@ export default {
       const options = {
         // circumstances under which the observer's callback is invoked
         root: null, // defaults to the browser viewport if not specified or if null
-        threshold: "0" // the degree of intersection between the target element and its root (0 - 1)
+        threshold: "0.1" // the degree of intersection between the target element and its root (0 - 1)
         // threshold of 1.0 means that when 100% of the target is visible within
         //the element specified by the root option, the callback is invoked
       };
@@ -38,7 +38,9 @@ export default {
 
       const observer = new IntersectionObserver(handleIntersect, options);
 
-      observer.observe(el); // target element to watch
+      setTimeout(() => {
+        observer.observe(el); // target element to watch
+      }, 500);
     }
 
     if (!window["IntersectionObserver"]) {

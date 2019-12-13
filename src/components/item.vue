@@ -5,11 +5,11 @@
 				.col-md-12
 					.item.hidden(v-html="item.title")
 					div.imageGroup(v-lazyload)
+						img.img-fluid.d-block.mx-auto(:alt="item.title" @click="oneMore" :src="imgDefault" :data-url="img_file" )
 						.voteBar(v-if="votesVisible")
 							p Votos: {{ item.votes }}
 								template(v-if="!voted && !closedVoting")
 									button.btn(@click="oneMore") Vota <i class="fa fa-thumbs-up"></i>
-						img.img-fluid.d-block.mx-auto(:src="imgDefault" :data-url="img_file" :alt="item.title" @click="oneMore")
 						.firmaFoto(v-if="item.photographer")
 							span.fa.fa-camera-retro.fa-lg 
 							span.space {{ item.photographer }}
@@ -82,6 +82,7 @@ export default {
   margin: 0 auto;
   & img {
     margin-top: 0;
+    border: 1px solid var(--colorDestacado);
   }
 }
 

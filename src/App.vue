@@ -130,7 +130,8 @@ export default {
           // console.log("respuest dice que tiene votos: ", res[0].votes)
           
           //Then I add a vote to the real number of votes
-          this.list[myItem].votes = parseInt(res[0].votes) + 1;
+          // this.list[myItem].votes = parseInt(res[0].votes) + 1;
+          let newVote = parseInt(res[0].votes) + 1;
           // console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
 
             this.voted = true
@@ -142,26 +143,36 @@ export default {
           fetch(urlAPI, {
               method: 'POST',
               body: JSON.stringify({
-                votes: parseInt(this.list[myItem].votes)
+                votes: newVote
+                // votes: parseInt(this.list[myItem].votes)
               })
             })
             .then(res => res.text())
             .then(res => {
               // console.log(res)
             
-            this.lookingForVotes()
-            })
+                        // this.list[myItem].votes = newVote;
                         
 
-        }
+              console.log("reiniciando");
+              let myVotes = this.list;
         
-        
-        )
-                    
+              // console.log(myVotes);
+              this.list = [];
+              setTimeout(() => {
+                this.list = myVotes;
+                          this.list[myItem].votes = newVote;
+                          const item = this.list[myItem].title;
+                          console.log(item)
+      
+                          this.lookForY(item);
       
       
-      
+                // this.lookingForVotes();
        
+              }, 100);
+            });
+        });
     },
     
     //Method that cofigure main colors
@@ -172,6 +183,16 @@ export default {
         document.body.style.setProperty('--fondoBarra', this.newspaper.headerBackground)
         document.body.style.setProperty('--colorRedes', this.newspaper.sharer)
         document.body.style.setProperty('--colorSobre', this.newspaper.over)   
+    },
+    lookForY(item){
+      setTimeout(() => {
+        
+        const myItem = document.getElementById(item);
+        const Y = myItem.offsetParent.offsetTop;
+        console.log('Y', Y);
+         window.scrollTo({top: Y, behavior: 'smooth'});
+        
+      }, 100);
     },
 
     //Method that loads the ranking data from the external database through an API

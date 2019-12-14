@@ -66,11 +66,11 @@ export default {
         //Data related to the publication
         this.newspaper = json.newspaper
         // console.log("closed", this.newspaper.closedVoting)
-       if(!this.newspaper.ordered || window.localStorage.getItem('voted')){
+       if(!this.newspaper.ordered ||  window.localStorage.getItem(`voted-${this.newspaper.folder}`)){
           let today = new Date()
           today = this.getDateFormated(today)
           let votedDate
-          if(window.localStorage.getItem('votedDate')) votedDate =  window.localStorage.getItem('votedDate');
+          if(window.localStorage.getItem(`votedDate-${this.newspaper.folder}`)) votedDate =  window.localStorage.getItem(`votedDate-${this.newspaper.folder}`);
           // console.log (today, votedDate)
           if(today === votedDate) this.voted = true
           // console.log (today, votedDate)
@@ -135,9 +135,9 @@ export default {
           // console.log("Id: ",this.list[myItem].votesId, this.list[myItem].votes);
 
             this.voted = true
-            window.localStorage.setItem("voted", true)
-            window.localStorage.setItem("votedDate", this.getDateFormated(Date()))
-            // console.log(window.localStorage.getItem("votedDate"))
+            window.localStorage.setItem(`voted-${this.newspaper.folder}`, true)
+            window.localStorage.setItem(`votedDate-${this.newspaper.folder}`, this.getDateFormated(Date()))
+            // console.log(this)
 
           // Then I send the AJAX request to add the vote
           fetch(urlAPI, {
@@ -207,7 +207,7 @@ export default {
         // console.log(today, voteDay)
         // if(gap>1 || today!==voteDay){
         if(gap>1){
-          window.localStorage.removeItem('voted')
+          window.localStorage.removeItem(`voted-${this.newspaper.folder}`)
           window.localStorage.removeItem('votedDate')
         }
         

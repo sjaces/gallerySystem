@@ -7,18 +7,18 @@
     "site": "dsv",
     "googleCode": "GTM-W5GDNS",
     "domain": "diariodesevilla.es",
-    "title": "Los pueblos con más encanto de Sevilla",
-    "titleH1": "Elige el pueblo con más encanto de Sevilla",
-    "subtitle": "¿Cuál es el pueblo más bonito de Sevilla?",
-    "shortDescription": "¿Cuál es el pueblo más bonito de Sevilla? A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial.",
-    "description": "A esta pregunta nos hemos propuesto contestar de forma colectiva en Diario de Sevilla sometiendo al criterio de nuestros usuarios y lectores el listado de 15 municipios que ya cuentan con el reconocimiento y protección de sus cascos históricos por su singularidad y su importante valor patrimonial. Tras un periplo de 15 días difundiendo sus paisajes y sus valores, llega la hora de la elección ¡Ayúdanos a elegir el pueblo con más encanto con tu voto! <br> Sólo se puede votar una vez cada 24 horas y sólo por uno de los 15 pueblos candidatos.  El orden del listado irá cambiando según avancen las votaciones en sentido descendente.",
+    "title": "",
+    "titleH1": "",
+    "subtitle": "",
+    "shortDescription": "",
+    "description": "",
     "keywords": ["Sevilla", "lugares", "visitar"],
     "twitterSite": "diariosevilla",
-    "URL": "https://www.diariodesevilla.es/temas/pueblos-mas-encanto-provincia-sevilla/index.php",
+    "URL": "https://www.diariodesevilla.es/temas/##CARPETA##",
     "authors": [
       {
         "name": "Ángel J Cachón de Elías",
-        "link": "https://twitter.com/sjaces",
+        "link": "",
         "role" : "Diseño y Programación"
       },
       {
@@ -37,9 +37,9 @@
         "role" : "Coordinación"
       }
     ],
-    "numbers": false,
+    "numbers": true,
     "alignment": "text-center",
-    "folder": "pueblos-mas-encanto-provincia-sevilla",
+    "folder": "##CARPETA##",
     "logos": "color",
     "backgroundColor": "#FFF",
     "color": "#000",
@@ -47,8 +47,8 @@
     "headerBackground": "#FFF",
     "sharer": "#FFF",
     "over": "#000",
-    "ordered": true,
-    "closedVoting": false,
+    "ordered": false,
+    "closedVoting": true,
     "db_server": "https://www.diariodesevilla.es/temas/utils/api/"
   },
   "cover":{

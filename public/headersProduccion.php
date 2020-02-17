@@ -1,23 +1,40 @@
-<!-- Begin comScore Tag -->
-      <script>
-        var _comscore = _comscore || [];
-        _comscore.push({ c1: "2", c2: "14621244" });
-        (function() {
-          var s = document.createElement("script"),
-            el = document.getElementsByTagName("script")[0];
-          s.async = true;
-          s.src =
-            (document.location.protocol == "https:" ? "https://sb" : "http://b") +
-            ".scorecardresearch.com/beacon.js";
-          el.parentNode.insertBefore(s, el);
+    <?php
+      include 'consent-publi.html';
+    ?>
+<!--Librería de publicidad-->
+   <script>
+        !function(){window.hb_now=Date.now();var e=document.getElementsByTagName("script")[0],t="https://hb.20m.es/stable/config/grupojoly.com/desktop.min.js";var n=document.createElement("script");n.async=!0,n.src=t,e.parentNode.insertBefore(n,e)}();
+  </script>
+
+ <!-- Begin comScore Tag -->
+ <script>
+    var _comscore = _comscore || [];
+    var comscore_config = { c1: "2", c2: "14621244"};
+
+    window.didomiOnReady.push(function (Didomi) {
+        var consentStatus = Didomi.getUserConsentStatusForVendor('77');
+        if (typeof consentStatus == 'undefined') {
+            var comscore_config = { c1: "2", c2: "14621244"};
+        } else if (consentStatus === true) {
+            var comscore_config = { c1: "2", c2: "14621244", cs_ucfr: "1" };
+        } else {
+            var comscore_config = { c1: "2", c2: "14621244", cs_ucfr: "0" };
+        }
+
+        _comscore.push(comscore_config);
+        (function () {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+            s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
         })();
-      </script>
-      <noscript>
-        <img
-          src="https://sb.scorecardresearch.com/p?c1=2&c2=14621244&cv=2.0&cj=1"
-        />
-      </noscript>
-      <!-- End comScore Tag -->
+    });
+</script>
+<noscript>
+    <img src="https://sb.scorecardresearch.com/p?c1=2&c2=14621244&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+
   
       <!--DataLayer Analytics y AdServer-->
       <script>

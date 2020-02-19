@@ -17,7 +17,7 @@
                 />
               </a>
               <br />
-              <p class="text-muted">© Copyright 2019 Grupo Joly</p>
+              <p class="text-muted">© Copyright {{new Date().getFullYear()}} Grupo Joly</p>
             </div>
           </div>
         </div>

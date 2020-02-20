@@ -138,7 +138,7 @@
     <!--Una descripción del especial. Rellenarlo sin espacios ni intros-->
     <meta name="twitter:description" content="<?=strip_tags($obj->newspaper->shortDescription)?>">
     <!--URL de la imagen con la que se va a compartir en TW el especial. Puede ser cualquiera del especial-->
-    <meta name="twitter:image:src" content="<?=$URLBASE?>/data/imagenes/portada.jpg">  
+    <meta name="twitter:image:src" content="<?=$URLBASE?>/data/imagenes/<?=$obj->cover->img_file?>" />  
     
     <!--FB Share-->
     <!--El título del especial  para cuando se comparta en Facebook-->
@@ -152,5 +152,5 @@
     <!--La URL del especial-->
     <meta property="og:url" content="<?=$obj->newspaper->URL?>" />
     <!--URL de la imagen con la que se va a compartir en FB el especial. Puede ser cualquiera del especial-->
-    <meta property="og:image" content="<?=$URLBASE?>/data/imagenes/portada.jpg" />
+    <meta property="og:image" content="<?=$URLBASE?>/data/imagenes/<?=$obj->cover->img_file?>" />
 

@@ -171,7 +171,7 @@ export default {
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 650px) {
 	
 	.calado {
     position: absolute;

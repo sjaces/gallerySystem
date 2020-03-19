@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 <template lang="pug">
   section
     #app
@@ -148,13 +149,13 @@ export default {
               })
             })
             .then(res => res.text())
-            .then(res => {
+            .then(() => {
               // console.log(res)
             
                         // this.list[myItem].votes = newVote;
                         
 
-              console.log("reiniciando");
+              // console.log("reiniciando");
               let myVotes = this.list;
         
               // console.log(myVotes);
@@ -163,7 +164,7 @@ export default {
                 this.list = myVotes;
                           this.list[myItem].votes = newVote;
                           const item = this.list[myItem].title;
-                          console.log(item)
+                          // console.log(item)
       
                           this.lookForY(item);
       
@@ -189,7 +190,7 @@ export default {
         
         const myItem = document.getElementById(item);
         const Y = myItem.offsetParent.offsetTop;
-        console.log('Y', Y);
+        // console.log('Y', Y);
          window.scrollTo({top: Y, behavior: 'smooth'});
         
       }, 100);
@@ -231,7 +232,7 @@ export default {
             // console.log("Votos de ", el.img_file, votesItem.votes)
             })
         }else{
-              console.log("voy a meter 0 votos a todos pq no están en base de datos")
+              // console.log("voy a meter 0 votos a todos pq no están en base de datos")
               let items = this.list.length
                   this.list.map(item => {
                       item.votes = 0
@@ -246,7 +247,7 @@ export default {
                         })
                       })
                       .then(res => res.text()) // OR res.json()
-                      .then(res => {
+                      .then(() => {
                         // console.log(res)
                         items--
                         if(items===0){

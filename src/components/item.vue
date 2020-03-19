@@ -20,9 +20,10 @@
 								//- 	p Votos: {{ item.votes }}
 								//- 	template(v-if="!voted")
 								//- 		button.btn(@click="oneMore") +1
-							h2.lead
-								span.colorDestacado(v-if="numbers") {{ number }}. 
-								span(v-html="item.title")
+								div(:class="item.onThePhoto")
+									h2.lead
+										span.colorDestacado(v-if="numbers") {{ number }}. 
+										span(v-html="item.title")
 					template(v-else)
 						div.imageGroup(v-lazyload)
 							img.img-fluid.d-block.mx-auto(:alt="item.title" @click="oneMore" :src="imgDefault" :data-url="img_file" )
@@ -167,5 +168,24 @@ export default {
 }
 .link {
 	cursor: pointer;
+}
+
+
+@media (min-width: 700px) {
+	
+	.calado {
+    position: absolute;
+    bottom: 3em;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    box-sizing: border-box;
+}
+.calado .lead {
+	color: white;
+	line-height: 1.1em;
+}
 }
 </style>

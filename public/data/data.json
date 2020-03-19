@@ -60,30 +60,34 @@
             "link": "https://www.diariodesevilla.es/galerias_graficas/",
             "img_file": "01-Sanlucar-Mayor.jpg",
             "photographer": "José Ángel García",
-            "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Sanlucar-Mayor-ciudad-sol_0_1395160611.html' target='_blank'>Sanlúcar la Mayor, la ciudad del sol</a> <br><a href='https://www.diariodesevilla.es/galerias_graficas/fotos-Sanlucar-Mayor_3_1395490444.html' class='btn btn-primary' target='_blank'>Sanlúcar la Mayor, en imágenes</a>",
+            "onThePhoto": "calado",
+            "text": "",
             "votes": 0
         },
         {
             "title": "Guadalcanal",
-            "link": "",
+            "link": "https://www.diariodesevilla.es/",
             "img_file": "02-Guadalcanal.jpg",
             "photographer": "Antonio Pizarro",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Guadalcanal-luz-estrellas_0_1395160604.html' target='_blank'>Guadalcanal, a la luz de las estrellas</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Guadalcanal-imagenes_3_1395490446.html' class='btn btn-primary' target='_blank'>Guadalcanal, en imágenes</a>",
             "votes": 0
         },
         {
             "title": "Constantina",
-            "link": "",
+            "link": "https://www.diariodesevilla.es/",
             "img_file": "03-Constantina.jpg",
             "photographer": "Antonio Pizarro",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Constantina-historia-arte-mano-Hernan-Ruiz_0_1395160603.html' target='_blank'>Constantina, historia y arte de la mano de Hernán Ruiz</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Constantina-imagenes_3_1395490447.html' class='btn btn-primary' target='_blank'>Constantina, en imágenes</a>",
             "votes": 0
         },
         {
             "title": "Villanueva del Río y Minas",
-            "link": "",
+            "link": "https://www.diariodesevilla.es/",
             "img_file": "04-Villanueva-Rio-Minas.jpg",
             "photographer": "Antonio Pizarro",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Villanueva-Rio-Minas-Duques-minerales_0_1395160600.html' target='_blank'>Villanueva del Río y Minas, tierra de Duques y minerales</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Villanueva-Rio-Minas-imagenes_3_1395490448.html' class='btn btn-primary' target='_blank'>Villanueva del Río y Minas, en imágenes</a>",
             "votes": 0
         },
@@ -92,14 +96,16 @@
             "link": "",
             "img_file": "05-Utrera.jpg",
             "photographer": "Juan Carlos Muñoz",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Utrera-cuna-pureza-flamenca_0_1395160594.html' target='_blank'>Utrera, cuna de la pureza flamenca</a><br> <a href='https://www.diariodesevilla.es/galerias_graficas/Utrera-imagenes_3_1395490449.html' class='btn btn-primary' target='_blank'>Utrera, en imágenes</a>",
             "votes": 0
         },
         {
             "title": "Cazalla de la Sierra",
-            "link": "",
+            "link": "https://www.diariodesevilla.es/",
             "img_file": "06-Cazalla-Sierra.jpg",
             "photographer": "Antonio Pizarro",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/todos-senderos-llevan-Cazalla-Sierra_0_1396360531.html' target='_blank'>Todos los senderos conducen a Cazalla de la Sierra</a><br> <a href='https://www.diariodesevilla.es/provincia/Cazalla-Sierra-imagenes_3_1396390350.html' class='btn btn-primary' target='_blank'>Cazalla de la Sierra, en imágenes</a>",
             "votes": 0
         },
@@ -108,6 +114,7 @@
             "link": "",
             "img_file": "07-Fuentes-Andalucia.jpg",
             "photographer": "Juan Carlos Muñoz",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-localidad-casas-senoriales_0_1396660623.html' target='_blank'>Fuentes de Andalucía, una localidad señorial</a><br> <a href='https://www.diariodesevilla.es/provincia/Fuentes-Andalucia-imagenes_3_1396990289.html' class='btn btn-primary' target='_blank'>Fuentes de Andalucía, en imágenes</a>",
             "votes": 0
         },
@@ -116,6 +123,7 @@
             "link": "",
             "img_file": "08-Lebrija.jpg",
             "photographer": "Juan Carlos Muñoz",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Lebrija-ciudad-dios-Baco_0_1394560861.html' target='_blank'>Lebrija, la ciudad del dios Baco</a> <br><a href='https://www.diariodesevilla.es/provincia/Lebrija-imagenes_3_1396990306.html' class='btn btn-primary' target='_blank'>Lebrija, en imágenes</a>",
             "votes": 0
         },
@@ -124,6 +132,7 @@
             "link": "",
             "img_file": "09-Arahal.jpg",
             "photographer": "Juan Carlos Váquez",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Arahal-cuna-mundial-aceituna-mesa_0_1394560779.html' target='_blank'>Un recorrido por Arahal, la cuna de la aceituna de mesa</a> <br><a href='https://www.diariodesevilla.es/provincia/Arahal-imagenes_3_1397290265.html' class='btn btn-primary' target='_blank'>Arahal, en imágenes</a>",
             "votes": 0
         },
@@ -132,6 +141,7 @@
             "link": "",
             "img_file": "10-Olivares.jpg",
             "photographer": "Juan Carlos Muñoz",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Olivares-tierra-Barroco_0_1394260849.html' target='_blank'>Olivares, la tierra del Barroco</a><br> <a href='https://www.diariodesevilla.es/provincia/Olivares-imagenes_3_1397290266.html' class='btn btn-primary' target='_blank'>Olivares, en imágenes</a>",
             "votes": 0
         },
@@ -140,6 +150,7 @@
             "link": "",
             "img_file": "11-Osuna.jpg",
             "photographer": "Juan Carlos Vázquez",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Osuna-ciudad-senorial_0_1397260378.html' target='_blank'>Osuna, la ciudad señorial</a><br> <a href='https://www.diariodesevilla.es/provincia/Osuna-imagenes_3_1397290269.html' class='btn btn-primary' target='_blank'>Osuna, en imágenes</a>",
             "votes": 0
         },
@@ -148,14 +159,16 @@
             "link": "",
             "img_file": "12-Marchena.jpg",
             "photographer": "Juan Carlos Vázquez",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Marchena-Flamenco-sensibilidad-senorio_0_1397260585.html' target='_blank'>Flamenco, sensibilidad y señorío</a> <br><a href='https://www.diariodesevilla.es/provincia/Marchena-imagenes_3_1398490140.html' class='btn btn-primary' target='_blank'>Marchena, en imágenes</a>",
             "votes": 0
         },
         {
-            "title": "Écija",
-            "link": "",
+            "title": "Écija fsafa skhfhasdlfh asldkfh alskdfh asldfh aklsdf a falskdf asf",
+            "link": "www.sjaces.com",
             "img_file": "13-Ecija.jpg",
             "photographer": "José Ángel García",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Ecija-ciudad-sol_0_1396660612.html' target='_blank'>Écija, la ciudad del sol</a> <br><a href='https://www.diariodesevilla.es/provincia/Ecija-imagenes_3_1398490141.html' class='btn btn-primary' target='_blank'>Écija, en imágenes</a>",
             "votes": 0
         },
@@ -164,6 +177,7 @@
             "link": "",
             "img_file": "14-Estepa.jpg",
             "photographer": "Juan Carlos Vázquez",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Estepa-corazon-Andalucia_0_1397560368.html' target='_blank'>Estepa, corazón de Andalucía</a><br> <a href='https://www.diariodesevilla.es/provincia/Estepa-imagenes_3_1398490142.html' class='btn btn-primary' target='_blank'>Estepa, en imágenes</a>",
             "votes": 0
         },
@@ -172,6 +186,7 @@
             "link": "",
             "img_file": "15-Carmona.jpg",
             "photographer": "Antonio Pizarro",
+            "onThePhoto": "calado",
             "text": "<a class='' href='https://www.diariodesevilla.es/provincia/Carmona-pueblos-bonitos-Espana_0_1394860724.html' target='_blank'>Carmona, uno de los pueblos más bonitos de España</a> <br><a href='https://www.diariodesevilla.es/provincia/Carmona-imagenes_3_1397290271.html' class='btn btn-primary' target='_blank'>Carmona, en imágenes</a>",
             "votes": 0
         }

@@ -4,6 +4,8 @@
 			.row
 				.col-md-12
 					.item.hidden(v-html="item.title")
+					template(v-if="item.header")
+							h3.header {{item.header}}
 					template(v-if="item.link")
 						a.link(:href="item.link" target="_blank")
 							div.imageGroup(v-lazyload)
@@ -168,6 +170,15 @@ export default {
 }
 .link {
 	cursor: pointer;
+}
+
+.header {
+	font-size: 0.9em;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 2.5px solid;
+    width: fit-content;
 }
 
 

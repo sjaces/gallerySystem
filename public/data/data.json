@@ -51,6 +51,7 @@
         "photographer": ""
     },
     "list": [{
+            "header": "Prueba",
             "title": "Galerías gráficas",
             "link": "https://www.diariodesevilla.es/galerias_graficas/",
             "img_file": "",
@@ -60,6 +61,7 @@
             "votes": 0
         },
         {
+            "header": "Prueba",
             "title": "Galerías gráficas",
             "link": "",
             "img_file": "",
@@ -96,132 +98,7 @@
             "votes": 0
         },
         {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
-            "title": "Galerías gráficas",
-            "link": "https://www.diariodesevilla.es/galerias_graficas/",
-            "img_file": "",
-            "photographer": "",
-            "onThePhoto": "calado",
-            "text": "",
-            "votes": 0
-        },
-        {
+            "header": "Prueba",
             "title": "Galerías gráficas",
             "link": "https://www.diariodesevilla.es/galerias_graficas/",
             "img_file": "",

@@ -6,7 +6,7 @@
       Authors(:authors="newspaper.authors")
       List(:list="orderedList" v-on:oneMore="oneMore" :voted="voted" :closedVoting="closedVoting" :numbers="newspaper.numbers" :alignment="newspaper.alignment")
       Recomendations(:teInteresa="teInteresa" v-if="showTeInteresa")
-      Footer
+      Footer(:newspaper="newspaper")
       ShareButtons(:newspaper="newspaper")
 </template>
 

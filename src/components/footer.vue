@@ -18,6 +18,7 @@
               </a>
               <br />
               <p class="text-muted">© Copyright {{new Date().getFullYear()}} Grupo Joly</p>
+              <p>Joly Digital | <a :href="lopd" target="_blank" title="Enlace footer" class="aforce">Política de privacidad</a> | <a :href="cookies" target="_blank" title="Enlace footer" class="aforce">Política de cookies</a> | <a href="javascript:Didomi.preferences.show('purposes');" title="Enlace footer" class="aforce">Configuración de cookies</a></p>
             </div>
           </div>
         </div>
@@ -25,8 +26,26 @@
 </template>
 
 <script>
-export default {
-
+export default {props: {
+    newspaper:{
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    lopd() {
+      if(this.newspaper){
+        return `https://www.${this.newspaper.domain}/lopd`;
+      }
+      return ''
+    },
+    cookies() {
+      if(this.newspaper){
+        return `https://www.${this.newspaper.domain}/cookies/`;
+      }
+      return ''
+    }
+  }
 }
 </script>
 

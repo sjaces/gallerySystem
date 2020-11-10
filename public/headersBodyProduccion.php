@@ -1,15 +1,4 @@
  <!-- Google Tag Manager Body (noscript) -->
-    <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
-      DDC: GTM-K9ZKMV
-      DDJ: GTM-PBQVW9
-      ES: GTM-5FV3C8
-      DDS: GTM-W5GDNS
-      EDC: GTM-TL84P7
-      GH: GTM-57FMMR
-      DDA: GTM-NFF8PB
-      HI: GTM-M3F442
-      MH: GTM-W2RC7Q
-    -->
 
     <noscript>
       <iframe

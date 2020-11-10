@@ -1,23 +1,24 @@
 
-     <!-- En sustitución de  include 'consent-publi.html'; -->
+     <!-- Llamada al CMP NOV 2020 -->
      <script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
 else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
 var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
 if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
   var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("6e7011c3-735d-4a5c-b4d8-c8b97a71fd01")})();</script>
 
-
+     <!-- END Llamada al CMP NOV 2020 -->
    
-  <!--Librería de publicidad-->
+  <!--Librería de publicidad NOV 2020-->
 <script>
     !function(){window.hb_now=Date.now();var e=document.getElementsByTagName("script")[0],t="https://hb.20m.es/stable/config/grupojoly.com/desktop.min.js";window.location.search.match(/hb_test=true/)&&(t=t.replace("/stable/","/test/"));var n=document.createElement("script");n.async=!0,n.src=t,e.parentNode.insertBefore(n,e)}();
 </script>
+  <!--END Librería de publicidad NOV 2020-->
 
- <!-- Begin comScore Tag -->
- <script>
+ <!-- Begin comScore Tag NOV 2020-->
+<script>
     var _comscore = _comscore || [];
     var comscore_config = { c1: "2", c2: "14621244"};
-
+    window.didomiOnReady = window.didomiOnReady || [];
     window.didomiOnReady.push(function (Didomi) {
         var consentStatus = Didomi.getUserConsentStatusForVendor('77');
         if (typeof consentStatus == 'undefined') {
@@ -32,15 +33,15 @@ if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window
         (function () {
             var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
             s.async = true;
-            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/cs/14621244/beacon.js";
             el.parentNode.insertBefore(s, el);
         })();
     });
 </script>
 <noscript>
-    <img src="https://sb.scorecardresearch.com/p?c1=2&c2=14621244&cv=2.0&cj=1"/>
+    <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=14621244&amp;cv=3.6.0&amp;cj=1">
 </noscript>
-<!-- End comScore Tag -->
+<!-- End comScore Tag NOV 2020-->
 
   
       <!--DataLayer Analytics y AdServer-->
@@ -82,17 +83,7 @@ if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window
       <!--Fin DataLayer Analytics y AdServer-->
   
       <!-- Google Tag Manager Header-->
-      <!--El Código de TAG Manager del diario. Sustituir XXXXXXXXX por el código del diario. Los códigos son: 
-        DDC: GTM-K9ZKMV
-        DDJ: GTM-PBQVW9
-        ES: GTM-5FV3C8
-        DDS: GTM-W5GDNS
-        EDC: GTM-TL84P7
-        GH: GTM-57FMMR
-        DDA: GTM-NFF8PB
-        HI: GTM-M3F442
-        MH: GTM-W2RC7Q
-      -->
+     
       <script>
         (function(w, d, s, l, i) {
           w[l] = w[l] || [];

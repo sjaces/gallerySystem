@@ -17,8 +17,9 @@
                 />
               </a>
               <br />
-              <p class="text-muted">© Copyright {{new Date().getFullYear()}} Grupo Joly</p>
               <p>Joly Digital | <a :href="lopd" target="_blank" title="Enlace footer" class="aforce">Política de privacidad</a> | <a :href="cookies" target="_blank" title="Enlace footer" class="aforce">Política de cookies</a> | <a href="javascript:Didomi.preferences.show('purposes');" title="Enlace footer" class="aforce">Configuración de cookies</a></p>
+              <br />
+              <p class="text-muted">© Copyright {{new Date().getFullYear()}} Grupo Joly</p>
             </div>
           </div>
         </div>
